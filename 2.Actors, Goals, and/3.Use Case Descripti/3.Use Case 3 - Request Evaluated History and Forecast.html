@@ -1,1 +1,65 @@
-<p><strong>Goal:&nbsp;</strong>The goal of this use case is to request and receive an evaluated immunization history and forecast of next doses due from another system.</p><p><strong>Supporting HL7 Version 2.5.1 Message Type: QBP &ndash;Profile Z44 and RSP &ndash;Profile Z42.</strong></p><p><strong>Precondition:</strong> A user or other actor requests that the sending system send a request for an evaluated history using demographic information and/or other identifiers.</p><p><strong>Post-condition:</strong> The requesting system receives an evaluated immunization history and forecast. Note that if no matches are found or there are errors, no immunization history will be returned. Typically, this is presented to the person who requested the evaluated history and forecast.</p><p>There are 5 possible results:</p><ol style="margin-left: 20px;"><li>One client matches exactly<sup>9&nbsp;&nbsp;</sup>the criteria sent</li><li>One or more clients match the criteria sent (inexact match)<sup>10</sup></li><li>No clients match the criteria sent</li><li>An exact match is found but they have requested that their data not be shared.</li><li>There were errors or other problems</li></ol><p style="margin-left: 20px;"><br></p><table style="width: 100%;"><tbody><tr><td class="fr-thick" style="width: 100.0000%;">Note that systems must deal with the situation where a Client has indicated that his/her records must be protected. (Only the owning provider may view) This should be clearly documented.</td></tr></tbody></table><p><br></p>
+<p>
+ <strong>
+  Goal:
+ </strong>
+ The goal of this use case is to request and receive an evaluated immunization history and forecast of next doses due from another system.
+</p>
+<p>
+ <strong>
+  Supporting HL7 Version 2.5.1 Message Type: QBP –Profile Z44 and RSP –Profile Z42.
+ </strong>
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ A user or other actor requests that the sending system send a request for an evaluated history using demographic information and/or other identifiers.
+</p>
+<p>
+ <strong>
+  Post-condition:
+ </strong>
+ The requesting system receives an evaluated immunization history and forecast. Note that if no matches are found or there are errors, no immunization history will be returned. Typically, this is presented to the person who requested the evaluated history and forecast.
+</p>
+<p>
+ There are 5 possible results:
+</p>
+<ol style="margin-left: 20px;">
+ <li>
+  One client matches exactly
+  <sup>
+   9
+  </sup>
+  the criteria sent
+ </li>
+ <li>
+  One or more clients match the criteria sent (inexact match)
+  <sup>
+   10
+  </sup>
+ </li>
+ <li>
+  No clients match the criteria sent
+ </li>
+ <li>
+  An exact match is found but they have requested that their data not be shared.
+ </li>
+ <li>
+  There were errors or other problems
+ </li>
+</ol>
+<p style="margin-left: 20px;">
+ <br/>
+</p>
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td class="fr-thick" style="width: 100.0000%;">
+    Note that systems must deal with the situation where a Client has indicated that his/her records must be protected. (Only the owning provider may view) This should be clearly documented.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+ <br/>
+</p>
