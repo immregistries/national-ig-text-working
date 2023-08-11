@@ -1,1 +1,57 @@
-<p>The IHE profile defines 2 queries for obtaining an ID of interest. One query requests an id based on the demographic information included in the query (PDQ, using the Pediatric Demographic profile). When a match is found, it returns the relevant id and demographic information. The other query seeks an id for a person from one registered provider based on the id from another registered provider (PIX).</p><p>The use of the IHE Patient Identification Cross-Referencing (PIX) and Patient Demographic Query (PDQ) transactions is an alternative approach which separates retrieval/update of a patient identifier and retrieval/update of immunization data into two messaging transactions.</p><p>A Patient Demographic Supplier may be a Master Person Index or other source of patient demographic and identification information. While we will focus on an MPI below, any Patient Demographic Supplier may be substituted.</p><p>A Master Person Index is a database that contains demographic and locating information of registered persons and associates each person with the identifiers for the person from each of the participating systems. This allows one system to request the identifier for a person that was assigned by another system. This ID may be used to request data from that second system and assures a positive match.</p><p>Systems that participate in an MPI should register each person they are interested in with the MPI. An excellent profile for maintaining and interacting with an MPI has been published by the group, Integrating the Healthcare Enterprise (IHE). That profile will not be replicated here. However, the process for requesting personal identifier outlined below is based on that profile.</p><p>Adding a patient record to an MPI is done by a PIX transaction using an ADT message. This method may be used by an EHR or by an IIS, or both, to add a patient identifier to an MPI. The PIX profile, described in the IHE Technical Framework Volume I, includes specific transactions that describe the segments and fields to be used. These ADT-based transactions are described in the IHE Technical Framework Volume II. The standard transaction used by PIX is ITI-8, which uses an HL7 V2.3.1 ADT. The Pediatric Demographics Option, described at this writing in a supplement to PIX and PDQ, is preferred for interactions with MPIs managing IIS data. The use of the Pediatric Demographics Option adds ITI-30, which uses an HL7 V2.5 ADT.</p><p>Once a person has been registered with the MPI, a PIX Query may be used to retrieve the cross-referenced IIS identifier (if any).</p><p>The following diagram illustrates the use of the PIX query to get a pre-registered patient identifier. This requires that the cross-referenced identifiers are registered using the ADT message.</p><p><img src="/api/storage/file?name=a20a6b0d-b7f4-4589-907e-bffe3751fd0a.png" style="width: 300px;" class="fr-fic fr-dib"></p><p style="text-align: center;"><strong><span style="font-size: 12px;">Figure A-4 Sequence Diagram: Two-Step Request</span></strong></p><p>Note that this interaction is simplified. The initiating system sends a request for a patient identifier. The request includes one identifier in a PID-3. The identity supplier looks for a matching identifier of interest and returns it along with the patient name (PID-5). This information is included in the request immunization history query (QBP^Q11). Assuming that the identifier used is the one in the immunization history supplier, there should be a one to one match.</p><p>If the EHR wishes to retrieve the IIS id without previously registering the patient with the MPI, or if it wishes to query the MPI by demographics for some other reason, it may use a Patient Demographics Query to do so.</p><p>The following diagram illustrates the use of PDQ to obtain an id and how this would be used to request an immunization record. The record seeker uses a Patient Demographic Query (PDQ) to a Master Person Index (MPI), requesting the identifiers for the person of interest. The MPI finds the person of interest and returns the demographic information and identifiers. The record seeker system uses this information to create a request for immunization history, which it sends to the record source. The record source uses this information to find the immunization history for the person of interest.</p><p style="text-align: center;"><img src="/api/storage/file?name=4f3003c7-ed2b-4c70-a04f-040ec79bc00e.png" style="width: 300px;" class="fr-fic fr-dib"><strong><span style="font-size: 12px;">Figure A-5 Sequence Diagram: Request Immunization History Using PDQ</span></strong></p><p>Note that this interaction is simplified. The client of interest would be selected, and that client&rsquo;s information would populate the query requesting an immunization history. To be assured of success, the record source system would need to have registered the person in the MPI. In that way the person id in the record source would be available in the MPI.</p><p><br></p>
+<p>
+ The IHE profile defines 2 queries for obtaining an ID of interest. One query requests an id based on the demographic information included in the query (PDQ, using the Pediatric Demographic profile). When a match is found, it returns the relevant id and demographic information. The other query seeks an id for a person from one registered provider based on the id from another registered provider (PIX).
+</p>
+<p>
+ The use of the IHE Patient Identification Cross-Referencing (PIX) and Patient Demographic Query (PDQ) transactions is an alternative approach which separates retrieval/update of a patient identifier and retrieval/update of immunization data into two messaging transactions.
+</p>
+<p>
+ A Patient Demographic Supplier may be a Master Person Index or other source of patient demographic and identification information. While we will focus on an MPI below, any Patient Demographic Supplier may be substituted.
+</p>
+<p>
+ A Master Person Index is a database that contains demographic and locating information of registered persons and associates each person with the identifiers for the person from each of the participating systems. This allows one system to request the identifier for a person that was assigned by another system. This ID may be used to request data from that second system and assures a positive match.
+</p>
+<p>
+ Systems that participate in an MPI should register each person they are interested in with the MPI. An excellent profile for maintaining and interacting with an MPI has been published by the group, Integrating the Healthcare Enterprise (IHE). That profile will not be replicated here. However, the process for requesting personal identifier outlined below is based on that profile.
+</p>
+<p>
+ Adding a patient record to an MPI is done by a PIX transaction using an ADT message. This method may be used by an EHR or by an IIS, or both, to add a patient identifier to an MPI. The PIX profile, described in the IHE Technical Framework Volume I, includes specific transactions that describe the segments and fields to be used. These ADT-based transactions are described in the IHE Technical Framework Volume II. The standard transaction used by PIX is ITI-8, which uses an HL7 V2.3.1 ADT. The Pediatric Demographics Option, described at this writing in a supplement to PIX and PDQ, is preferred for interactions with MPIs managing IIS data. The use of the Pediatric Demographics Option adds ITI-30, which uses an HL7 V2.5 ADT.
+</p>
+<p>
+ Once a person has been registered with the MPI, a PIX Query may be used to retrieve the cross-referenced IIS identifier (if any).
+</p>
+<p>
+ The following diagram illustrates the use of the PIX query to get a pre-registered patient identifier. This requires that the cross-referenced identifiers are registered using the ADT message.
+</p>
+<p>
+ <img class="fr-fic fr-dib" src="/api/storage/file?name=a20a6b0d-b7f4-4589-907e-bffe3751fd0a.png" style="width: 300px;"/>
+</p>
+<p style="text-align: center;">
+ <strong>
+  <span style="font-size: 12px;">
+   Figure A-4 Sequence Diagram: Two-Step Request
+  </span>
+ </strong>
+</p>
+<p>
+ Note that this interaction is simplified. The initiating system sends a request for a patient identifier. The request includes one identifier in a PID-3. The identity supplier looks for a matching identifier of interest and returns it along with the patient name (PID-5). This information is included in the request immunization history query (QBP^Q11). Assuming that the identifier used is the one in the immunization history supplier, there should be a one to one match.
+</p>
+<p>
+ If the EHR wishes to retrieve the IIS id without previously registering the patient with the MPI, or if it wishes to query the MPI by demographics for some other reason, it may use a Patient Demographics Query to do so.
+</p>
+<p>
+ The following diagram illustrates the use of PDQ to obtain an id and how this would be used to request an immunization record. The record seeker uses a Patient Demographic Query (PDQ) to a Master Person Index (MPI), requesting the identifiers for the person of interest. The MPI finds the person of interest and returns the demographic information and identifiers. The record seeker system uses this information to create a request for immunization history, which it sends to the record source. The record source uses this information to find the immunization history for the person of interest.
+</p>
+<p style="text-align: center;">
+ <img class="fr-fic fr-dib" src="/api/storage/file?name=4f3003c7-ed2b-4c70-a04f-040ec79bc00e.png" style="width: 300px;"/>
+ <strong>
+  <span style="font-size: 12px;">
+   Figure A-5 Sequence Diagram: Request Immunization History Using PDQ
+  </span>
+ </strong>
+</p>
+<p>
+ Note that this interaction is simplified. The client of interest would be selected, and that client’s information would populate the query requesting an immunization history. To be assured of success, the record source system would need to have registered the person in the MPI. In that way the person id in the record source would be available in the MPI.
+</p>
+<p>
+ <br/>
+</p>

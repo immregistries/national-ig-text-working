@@ -1,1 +1,37 @@
-<p>A well-formed query may find no matching candidates. This is not an error but should be acknowledged in a response message. The following example message shows how this may be done. Note that the Request Immunization History response grammar indicates that MSH, MSA, QAK and QPD are required segments.</p><p style="text-align: center;"><img src="/api/storage/file?name=f06d7c8e-78e5-4b35-bd83-c045e5168d64.png" style="width: 300px;" class="fr-fic fr-dib"><strong><span style="font-size: 12px;">Figure A-3 Sequence Diagram Acknowledging Response Indicating No Matches</span></strong></p><p>QAK-2 indicates that no data were found that matched the query parameters.</p><p><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">MSH|^~\&amp;|MYIIS|MyStateIIS||MYEHR|200911302300-0500||RSP^K11^RSP_K11|7731029|P|2.5.1|||NE|NE|||||Z33^ CDCPHINVS|MyStateIIS|MYEHR&lt;CR&gt;</span></p><p><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">MSA|AA|793543&lt;CR&gt;</span></p><p><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">QAK|37374859|NF|Z34^request Immunization history^CDCPHINVS&lt;CR&gt;</span></p><p><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">QPD| Z34^Request Immunization History^CDCPHINVS |37374859|123456^^^MYEHR^MR|Child^Bobbie^Q^^^^L|Que^Suzy^^^^^M|20050512|M|10 East Main St^^Myfaircity^GA^^^L&lt;CR&gt;</span></p><p><br></p>
+<p>
+ A well-formed query may find no matching candidates. This is not an error but should be acknowledged in a response message. The following example message shows how this may be done. Note that the Request Immunization History response grammar indicates that MSH, MSA, QAK and QPD are required segments.
+</p>
+<p style="text-align: center;">
+ <img class="fr-fic fr-dib" src="/api/storage/file?name=f06d7c8e-78e5-4b35-bd83-c045e5168d64.png" style="width: 300px;"/>
+ <strong>
+  <span style="font-size: 12px;">
+   Figure A-3 Sequence Diagram Acknowledging Response Indicating No Matches
+  </span>
+ </strong>
+</p>
+<p>
+ QAK-2 indicates that no data were found that matched the query parameters.
+</p>
+<p>
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  MSH|^~\&amp;|MYIIS|MyStateIIS||MYEHR|200911302300-0500||RSP^K11^RSP_K11|7731029|P|2.5.1|||NE|NE|||||Z33^ CDCPHINVS|MyStateIIS|MYEHR&lt;CR&gt;
+ </span>
+</p>
+<p>
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  MSA|AA|793543&lt;CR&gt;
+ </span>
+</p>
+<p>
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  QAK|37374859|NF|Z34^request Immunization history^CDCPHINVS&lt;CR&gt;
+ </span>
+</p>
+<p>
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  QPD| Z34^Request Immunization History^CDCPHINVS |37374859|123456^^^MYEHR^MR|Child^Bobbie^Q^^^^L|Que^Suzy^^^^^M|20050512|M|10 East Main St^^Myfaircity^GA^^^L&lt;CR&gt;
+ </span>
+</p>
+<p>
+ <br/>
+</p>

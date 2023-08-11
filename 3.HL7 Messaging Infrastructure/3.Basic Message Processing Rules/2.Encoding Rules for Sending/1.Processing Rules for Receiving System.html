@@ -1,1 +1,226 @@
-<p>The following table contains the rules for processing received messages. Note that these outcomes may cascade. That is, if a required field has bad data, it is empty. If that required field is empty, the segment is treated as empty. If that segment is not a part of a segment group and is empty, the message is rejected.</p><p><br></p><table style="width: 100%;"><tbody><tr><td class="fr-thick" colspan="4" style="width: 99.931%;"><div style="text-align: center;"><strong>TABLE 3-1 RECEIVING SYSTEM PROCESSING RULES</strong></div></td></tr><tr><td class="fr-thick " style="width: 25%; text-align: center;"><strong>Condition</strong></td><td class="fr-thick " style="width: 25%; text-align: center;"><strong>Outcome</strong></td><td class="fr-thick " style="width: 25%; text-align: center;"><strong>Acknowledgement</strong></td><td class="fr-thick " style="width: 25%; text-align: center;"><strong>Action</strong></td></tr><tr><td class="fr-thick " style="width: 25.0000%;">Data fields are populated after last required field in segment.<br></td><td class="fr-thick " style="width: 25.0000%;">Ignore the extra fields.</td><td class="fr-thick " style="width: 25.0000%;">No Error<br></td><td class="fr-thick " style="width: 25.0000%;">Continue processing message.<br></td></tr><tr><td class="fr-thick " style="width: 25.0000%;">Data field violates data type specifications or contains unacceptable data.<br></td><td class="fr-thick " style="width: 25.0000%;">Treat the field as empty.</td><td class="fr-thick " style="width: 25.0000%;">Send Error</td><td class="fr-thick " style="width: 25.0000%;">Continue processing message.<br></td></tr><tr><td class="fr-thick " style="width: 25.0000%;">Required data field is empty.<br></td><td class="fr-thick " style="width: 25.0000%;">Treat the segment as empty.<br></td><td class="fr-thick " style="width: 25.0000%;">Send Error<br></td><td class="fr-thick " style="width: 25.0000%;">Continue processing message.<br></td></tr><tr><td class="fr-thick " style="width: 25.0000%;">Required But May Be Empty field is empty.<br></td><td class="fr-thick " style="width: 25.0000%;">No outcome<br></td><td class="fr-thick " style="width: 25.0000%;">No Error<br></td><td class="fr-thick " style="width: 25.0000%;">Continue processing message.</td></tr><tr><td class="fr-thick " style="width: 25.0000%;">Required or conditionally required segment is empty or missing.</td><td class="fr-thick " style="width: 25.0000%;">All data fields in segment are not present</td><td class="fr-thick " style="width: 25.0000%;">Send Error<br></td><td class="fr-thick " style="width: 25.0000%;">Continue processing message.</td></tr><tr><td class="fr-thick" style="width: 25.0000%;">Optional segment or unexpected segment<sup>17&nbsp;</sup>is included.<br></td><td class="fr-thick " style="width: 25.0000%;">Ignore the segment. This is not an error.<br></td><td class="fr-thick " style="width: 25.0000%;">No error<br></td><td class="fr-thick " style="width: 25.0000%;">Continue processing message.<br></td></tr><tr><td class="fr-thick " style="width: 25.0000%;">Data segment out of proper order.<br></td><td class="fr-thick " style="width: 25.0000%;">Treat segment as empty.<br></td><td class="fr-thick " style="width: 25.0000%;">Send Error<br></td><td class="fr-thick " style="width: 25.0000%;">Continue processing message.<br></td></tr><tr><td class="fr-thick" style="width: 25.0000%;">Required segment that is not part of a segment group is empty.<br></td><td class="fr-thick " style="width: 25.0000%;">Reject message<br></td><td class="fr-thick " style="width: 25.0000%;">Send Error<br></td><td class="fr-thick " style="width: 25.0000%;">Reject message<br></td></tr><tr><td class="fr-thick " style="width: 25.0000%;">Required segment that is part of a segment group is empty or missing.<br></td><td class="fr-thick " style="width: 25.0000%;">Treat segment group as empty.<br></td><td class="fr-thick " style="width: 25.0000%;">Send Error<br></td><td class="fr-thick " style="width: 25.0000%;">Continue processing message.<br></td></tr><tr><td class="fr-thick " style="width: 25.0000%;">Required segment group is empty or missing.<br></td><td class="fr-thick" style="width: 25.0000%;">Reject message<br></td><td class="fr-thick " style="width: 25.0000%;">Send Error</td><td class="fr-thick " style="width: 25.0000%;">Reject message<br></td></tr></tbody></table><p><br></p><p>Note that all errors in processing a message should be communicated back to the sending system.</p><p><br></p>
+<p>
+ The following table contains the rules for processing received messages. Note that these outcomes may cascade. That is, if a required field has bad data, it is empty. If that required field is empty, the segment is treated as empty. If that segment is not a part of a segment group and is empty, the message is rejected.
+</p>
+<p>
+ <br/>
+</p>
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td class="fr-thick" colspan="4" style="width: 99.931%;">
+    <div style="text-align: center;">
+     <strong>
+      TABLE 3-1 RECEIVING SYSTEM PROCESSING RULES
+     </strong>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 25%; text-align: center;">
+    <strong>
+     Condition
+    </strong>
+   </td>
+   <td class="fr-thick" style="width: 25%; text-align: center;">
+    <strong>
+     Outcome
+    </strong>
+   </td>
+   <td class="fr-thick" style="width: 25%; text-align: center;">
+    <strong>
+     Acknowledgement
+    </strong>
+   </td>
+   <td class="fr-thick" style="width: 25%; text-align: center;">
+    <strong>
+     Action
+    </strong>
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Data fields are populated after last required field in segment.
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Ignore the extra fields.
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    No Error
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Continue processing message.
+    <br/>
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Data field violates data type specifications or contains unacceptable data.
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Treat the field as empty.
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Send Error
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Continue processing message.
+    <br/>
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Required data field is empty.
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Treat the segment as empty.
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Send Error
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Continue processing message.
+    <br/>
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Required But May Be Empty field is empty.
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    No outcome
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    No Error
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Continue processing message.
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Required or conditionally required segment is empty or missing.
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    All data fields in segment are not present
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Send Error
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Continue processing message.
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Optional segment or unexpected segment
+    <sup>
+     17
+    </sup>
+    is included.
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Ignore the segment. This is not an error.
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    No error
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Continue processing message.
+    <br/>
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Data segment out of proper order.
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Treat segment as empty.
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Send Error
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Continue processing message.
+    <br/>
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Required segment that is not part of a segment group is empty.
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Reject message
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Send Error
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Reject message
+    <br/>
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Required segment that is part of a segment group is empty or missing.
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Treat segment group as empty.
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Send Error
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Continue processing message.
+    <br/>
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Required segment group is empty or missing.
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Reject message
+    <br/>
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Send Error
+   </td>
+   <td class="fr-thick" style="width: 25.0000%;">
+    Reject message
+    <br/>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+ <br/>
+</p>
+<p>
+ Note that all errors in processing a message should be communicated back to the sending system.
+</p>
+<p>
+ <br/>
+</p>
