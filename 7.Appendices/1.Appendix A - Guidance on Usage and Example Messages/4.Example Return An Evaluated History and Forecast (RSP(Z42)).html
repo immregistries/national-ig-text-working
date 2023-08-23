@@ -2,7 +2,7 @@
  Evaluating an immunization history, based on the recommendations of the ACIP schedule or other schedule is an important function provided by many IIS. Based on this evaluation and other factors, recommendations may be made for next doses due. Some of their trading partners would like to receive the outcome of this evaluation. The previous implementation guide included a method for accomplishing this using OBX segments but showed it in a VXU. This document illustrates how this is done in response to a request and expands on the types of information that may be messaged.
 </p>
 <p>
- A requesting system sends a query requesting and evaluated history and forecast for a specific person. (QBP^Q11^QBP_Q11, profile id=Z44) If that person is found in the responding system, the responding system evaluates the immunizations administered against a schedule (e.g. ACIP) and forecasts when next doses are due. These are returned in an RSP message. (RSP^K11^RSP_K11, profile id=Z42) If an exact match can’t be found an acknowledgement message is returned indicating no match or errors in the message.
+ A requesting system sends a query requesting and evaluated history and forecast for a specific person. (QBP^Q11^QBP_Q11, profile id=Z44) If that person is found in the responding system, the responding system evaluates the immunizations administered against a schedule (e.g. ACIP) and forecasts when next doses are due. These are returned in an RSP message. (RSP^K11^RSP_K11, profile id=Z42) If an exact match can't be found an acknowledgement message is returned indicating no match or errors in the message.
 </p>
 <p>
 	<br/>
@@ -25,7 +25,7 @@
 	<br/>
 </p>
 <p>
- When a clinician evaluates a person’s immunization history and makes recommendations, she/he must use a standard (schedule). Traditionally, clinicians have evaluated based on vaccine groups or families. The schedule has one or more sets of immunization events that can be satisfied to indicate protection against the diseases of the vaccine group of interest. These constitute a series.
+ When a clinician evaluates a person's immunization history and makes recommendations, she/he must use a standard (schedule). Traditionally, clinicians have evaluated based on vaccine groups or families. The schedule has one or more sets of immunization events that can be satisfied to indicate protection against the diseases of the vaccine group of interest. These constitute a series.
 </p>
 <p>
  The following table lays out the information needed to convey an evaluation and forecast.
@@ -168,7 +168,7 @@
     Series Status
    </td>
 			<td class="fr-thick" style="width: 25.2325%;">
-    This indicates the status of the client’s progress toward meeting the goals of the series selected. This could be complete, overdue, in progress, etc.
+    This indicates the status of the client's progress toward meeting the goals of the series selected. This could be complete, overdue, in progress, etc.
    </td>
 			<td class="fr-thick" style="width: 24.7675%;">
     59783-1

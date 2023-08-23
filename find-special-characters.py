@@ -14,6 +14,6 @@ def find_special_characters(directory):
 
 
 current_directory = os.getcwd()
-print('Will files that need have special characters this directory: ' + current_directory)
+print('Will find files that need have special characters this directory: ' + current_directory)
 
 find_special_characters(current_directory)
