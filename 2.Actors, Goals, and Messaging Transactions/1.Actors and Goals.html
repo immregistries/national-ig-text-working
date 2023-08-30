@@ -1,248 +1,247 @@
 <p>
-  There are a number of primary actors involved in data exchange. These include:
- </p>
- <ul>
-   <li>
-   Immunization Information System (IIS)
-  </li>
-   <li>
-   Electronic Health Record Systems (EHR-S) and other systems
-   <sup>
-    5
-   </sup>
-   </li>
-   <li>
-   An actor with a supporting role may be a Master Person Index (MPI).
-   <sup>
-    6
-   </sup>
-   </li>
-   <li>
-   An actor with a supporting role may be a Health Information Exchange (HIE)
-  </li>
- </ul>
- <p>
-  This section will focus on the first 2 actors but will illustrate how the MPI actor may be integrated. These actors can be suppliers of information/data and consumers/requesters of data. We will consider the initiator of a messaging conversation the sender and the target of this first message the receiver. In some scenarios the sender may receive messages. For instance, a sender initiates a request for an immunization history for a client. The receiver responds with a message that is received by the initiating sender. For clarity, in this document, the initiator will keep the label of sender.
- </p>
- <p>
-  Note that we do not assume that the sender or receiver is a specific data source (IIS or EHR). One IIS may query another IIS or an EHR-S. Similarly, an EHR-S may send an immunization history to another EHR-S.
- </p>
- <p>
-  Other actors have an interest in the functions of an IIS and messaging. These include:
- </p>
- <ul>
-   <li>
-   Clients/patients
-  </li>
-   <li>
-   Users
-  </li>
-   <li>
-   Policy makers
-  </li>
-   <li>
-   Researchers
-  </li>
-   <li>
-   Public Health agencies
-  </li>
-   <li>
-   Clinicians
-  </li>
-   <li>
-   Billing systems
-  </li>
- </ul>
- <p>
-  These actors will not be directly addressed in this Guide. They interact with the primary actors to accomplish their needs.
- </p>
- <table style="width: 100%;">
-   <tbody>
-     <tr>
-       <td class="fr-thick" colspan="3" style="width: 99.9308%; text-align: center;">
-         <strong>
-      TABLE 2-1 ACTORS AND GOALS FOR MESSAGING
-     </strong>
-       </td>
-     </tr>
-     <tr>
-       <td class="fr-thick" style="width: 33.3332%; text-align: center;">
-         <strong>
-      Actor
-     </strong>
-       </td>
-       <td class="fr-thick" style="width: 33.2644%; text-align: center;">
-         <strong>
-      Responsibility
-     </strong>
-       </td>
-       <td class="fr-thick" style="width: 33.3333%; text-align: center;">
-         <strong>
-      Messaging Goals
-     </strong>
-       </td>
-     </tr>
-     <tr>
-       <td class="fr-thick" style="width: 33.3332%;">
-     Immunization Information System (IIS)
-    </td>
-       <td class="fr-thick" style="width: 33.2644%;">
-         <p>
-      Provide access to a complete, consolidated immunization record for each person in its catchment area
-     </p>
-         <p>
-      Supply individual immunization records to authorized users and systems
-     </p>
-         <p>
-      Support aggregate reporting and analysis
-     </p>
-         <p>
-      Evaluate immunization history and make recommendations for next doses
-     </p>
-         <p>
-      Store medical conditions that affect what vaccines are recommended
-     </p>
-       </td>
-       <td class="fr-thick" style="width: 33.3333%;">
-         <p>
-      Receive immunization histories and updates
-     </p>
-         <p>
-      Receive demographic updates
-     </p>
-         <p>
-      Receive requests for individual records
-     </p>
-         <p>
-      Receive observations about a person
-     </p>
-         <p>
-      Send observations about a person
-     </p>
-         <p>
-      Send immunization records to other systems
-     </p>
-         <p>
-      Send other systems evaluated immunization histories and forecasts of next doses due for a specific person
-     </p>
-         <p>
-      Request immunization record
-     </p>
-         <p>
-      Request person id
-     </p>
-         <p>
-      Acknowledge receipt of message
-     </p>
-         <p>
-      Report processing errors from receipt of message
-     </p>
-       </td>
-     </tr>
-     <tr>
-       <td style="width: 33.3332%;">
-     Electronic Health Record system (EHR-S)
-    </td>
-       <td style="width: 33.2644%;">
-         <p>
-      House a person's electronic health record
-     </p>
-         <p>
-      Make a person's record available to authorized persons
-     </p>
-         <p>
-      Provide decision support for clinical decisions.
-     </p>
-       </td>
-       <td style="width: 33.3333%;">
+ There are a number of primary actors involved in data exchange. These include:
+</p>
+<ul>
+ <li>
+  Immunization Information System (IIS)
+ </li>
+ <li>
+  Electronic Health Record Systems (EHR-S) and other systems
+  <sup>
+   5
+  </sup>
+ </li>
+ <li>
+  An actor with a supporting role may be a Master Person Index (MPI).
+  <sup>
+   6
+  </sup>
+ </li>
+ <li>
+  An actor with a supporting role may be a Health Information Exchange (HIE)
+ </li>
+</ul>
+<p>
+ This section will focus on the first 2 actors but will illustrate how the MPI actor may be integrated. These actors can be suppliers of information/data and consumers/requesters of data. We will consider the initiator of a messaging conversation the sender and the target of this first message the receiver. In some scenarios the sender may receive messages. For instance, a sender initiates a request for an immunization history for a client. The receiver responds with a message that is received by the initiating sender. For clarity, in this document, the initiator will keep the label of sender.
+</p>
+<p>
+ Note that we do not assume that the sender or receiver is a specific data source (IIS or EHR). One IIS may query another IIS or an EHR-S. Similarly, an EHR-S may send an immunization history to another EHR-S.
+</p>
+<p>
+ Other actors have an interest in the functions of an IIS and messaging. These include:
+</p>
+<ul>
+ <li>
+  Clients/patients
+ </li>
+ <li>
+  Users
+ </li>
+ <li>
+  Policy makers
+ </li>
+ <li>
+  Researchers
+ </li>
+ <li>
+  Public Health agencies
+ </li>
+ <li>
+  Clinicians
+ </li>
+ <li>
+  Billing systems
+ </li>
+</ul>
+<p>
+ These actors will not be directly addressed in this Guide. They interact with the primary actors to accomplish their needs.
+</p>
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <td class="fr-thick" colspan="3" style="width: 99.9308%; text-align: center;">
+    <strong>
+     TABLE 2-1 ACTORS AND GOALS FOR MESSAGING
+    </strong>
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 33.3332%; text-align: center;">
+    <strong>
+     Actor
+    </strong>
+   </td>
+   <td class="fr-thick" style="width: 33.2644%; text-align: center;">
+    <strong>
+     Responsibility
+    </strong>
+   </td>
+   <td class="fr-thick" style="width: 33.3333%; text-align: center;">
+    <strong>
+     Messaging Goals
+    </strong>
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 33.3332%;">
+    Immunization Information System (IIS)
+   </td>
+   <td class="fr-thick" style="width: 33.2644%;">
+    <p>
+     Provide access to a complete, consolidated immunization record for each person in its catchment area
+    </p>
+    <p>
+     Supply individual immunization records to authorized users and systems
+    </p>
+    <p>
+     Support aggregate reporting and analysis
+    </p>
+    <p>
+     Evaluate immunization history and make recommendations for next doses
+    </p>
+    <p>
+     Store medical conditions that affect what vaccines are recommended
+    </p>
+   </td>
+   <td class="fr-thick" style="width: 33.3333%;">
+    <p>
      Receive immunization histories and updates
-     <br/>
-         <br/>
-         <p>
-      Receive demographic updates
-     </p>
-         <p>
-      Receive requests for individual records
-     </p>
-         <p>
-      Send immunization records to IIS
-     </p>
-         <p>
-      Send demographic data
-     </p>
-         <p>
-      Receive observations about a person
-     </p>
-         <p>
-      Send observations about a person
-     </p>
-         <p>
-      Request Immunization record
-     </p>
-         <p>
-      Request person id
-     </p>
-         <p>
-      Acknowledge receipt of message
-     </p>
-         <p>
-      Report processing errors from receipt of message
-     </p>
-         <p>
-      Request evaluation on an immunization history and recommendations for next dose on a given Schedule, such as ACIP
-     </p>
-       </td>
-     </tr>
-     <tr>
-       <td class="fr-thick" style="width: 33.3332%;">
-     Master Person Index or other identity broker.
-    </td>
-       <td class="fr-thick" style="width: 33.2644%;">
-         <p>
-      Maintain a list of patients and identifiers for a set of persons
-     </p>
-         <p>
-      Supply identifiers for other system's use
-     </p>
-         <p>
-      Be a central demographic supplier for participating systems
-     </p>
-         <p>
-      Provide cross-reference for identifiers for participating systems.
-     </p>
-       </td>
-       <td class="fr-thick" style="width: 33.3333%;">
-         <p>
-      Send id for an individual for use in a record request or record update
-     </p>
-         <p>
-      Receive request for person id.
-     </p>
-         <p>
-      Return complete demographic data for an individual from central demographic store
-     </p>
-       </td>
-     </tr>
-   </tbody>
- </table>
- <p>
-  The table lists a number of messaging needs that relate to IIS and their trading partners. These are all candidates for HL7 messaging. Some are not currently implemented but give us the landscape that should be considered. Note that the messaging for maintaining of an MPI is out of scope for this Implementation Guide.
- </p>
- <p>
-  Another way to organize these tasks or goals is to decompose the goals of the entities (actors) into the various roles they may play. These roles include:
- </p>
- <ol>
-   <li>
-   Immunization history supplier
-  </li>
-   <li>
-   Immunization history consumer
-  </li>
-   <li>
-   Identity resolution broker
-  </li>
- </ol>
- <p>
-  Each of the actors above may have the capacity and interest to support some constellation of these roles. This approach is useful for system design and implementation and encourages a services approach to development. Since the goal of this chapter is to provide a non-technical view to help system managers understand how messaging can meet their needs, we will focus on the business entities and their goals.
- </p>
- 
+    </p>
+    <p>
+     Receive demographic updates
+    </p>
+    <p>
+     Receive requests for individual records
+    </p>
+    <p>
+     Receive observations about a person
+    </p>
+    <p>
+     Send observations about a person
+    </p>
+    <p>
+     Send immunization records to other systems
+    </p>
+    <p>
+     Send other systems evaluated immunization histories and forecasts of next doses due for a specific person
+    </p>
+    <p>
+     Request immunization record
+    </p>
+    <p>
+     Request person id
+    </p>
+    <p>
+     Acknowledge receipt of message
+    </p>
+    <p>
+     Report processing errors from receipt of message
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td style="width: 33.3332%;">
+    Electronic Health Record system (EHR-S)
+   </td>
+   <td style="width: 33.2644%;">
+    <p>
+     House a person's electronic health record
+    </p>
+    <p>
+     Make a person's record available to authorized persons
+    </p>
+    <p>
+     Provide decision support for clinical decisions.
+    </p>
+   </td>
+   <td style="width: 33.3333%;">
+    Receive immunization histories and updates
+    <br/>
+    <br/>
+    <p>
+     Receive demographic updates
+    </p>
+    <p>
+     Receive requests for individual records
+    </p>
+    <p>
+     Send immunization records to IIS
+    </p>
+    <p>
+     Send demographic data
+    </p>
+    <p>
+     Receive observations about a person
+    </p>
+    <p>
+     Send observations about a person
+    </p>
+    <p>
+     Request Immunization record
+    </p>
+    <p>
+     Request person id
+    </p>
+    <p>
+     Acknowledge receipt of message
+    </p>
+    <p>
+     Report processing errors from receipt of message
+    </p>
+    <p>
+     Request evaluation on an immunization history and recommendations for next dose on a given Schedule, such as ACIP
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 33.3332%;">
+    Master Person Index or other identity broker.
+   </td>
+   <td class="fr-thick" style="width: 33.2644%;">
+    <p>
+     Maintain a list of patients and identifiers for a set of persons
+    </p>
+    <p>
+     Supply identifiers for other system's use
+    </p>
+    <p>
+     Be a central demographic supplier for participating systems
+    </p>
+    <p>
+     Provide cross-reference for identifiers for participating systems.
+    </p>
+   </td>
+   <td class="fr-thick" style="width: 33.3333%;">
+    <p>
+     Send id for an individual for use in a record request or record update
+    </p>
+    <p>
+     Receive request for person id.
+    </p>
+    <p>
+     Return complete demographic data for an individual from central demographic store
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+ The table lists a number of messaging needs that relate to IIS and their trading partners. These are all candidates for HL7 messaging. Some are not currently implemented but give us the landscape that should be considered. Note that the messaging for maintaining of an MPI is out of scope for this Implementation Guide.
+</p>
+<p>
+ Another way to organize these tasks or goals is to decompose the goals of the entities (actors) into the various roles they may play. These roles include:
+</p>
+<ol>
+ <li>
+  Immunization history supplier
+ </li>
+ <li>
+  Immunization history consumer
+ </li>
+ <li>
+  Identity resolution broker
+ </li>
+</ol>
+<p>
+ Each of the actors above may have the capacity and interest to support some constellation of these roles. This approach is useful for system design and implementation and encourages a services approach to development. Since the goal of this chapter is to provide a non-technical view to help system managers understand how messaging can meet their needs, we will focus on the business entities and their goals.
+</p>

@@ -27,164 +27,164 @@
  As described in the MIROW document, a variety of factors play a role in determination of Patient Eligibility Status: VFC and grantee policies, age, private insurance coverage, type of provider, and type of vaccine to be administered. For instance a person who was an Alaska Native receiving an MMR would have an eligibility status code of V04. The following table gives a simplified view of the most common cases.
 </p>
 <p>
-	<br/>
+ <br/>
 </p>
 <table style="width: 100%;">
-	<tbody>
-		<tr>
-			<td class="fr-thick" style="width: 100.0000%;">
-    Technical Note: The design of the information systems interface and validation functionality should ensure a match between reported/messaged Patient Eligibility Status and administered Vaccine Eligibility Status &mdash; they have to be eligible for the same funding program. The following table is an illustration of the logic found in Table 0064.
+ <tbody>
+  <tr>
+   <td class="fr-thick" style="width: 100.0000%;">
+    Technical Note: The design of the information systems interface and validation functionality should ensure a match between reported/messaged Patient Eligibility Status and administered Vaccine Eligibility Status — they have to be eligible for the same funding program. The following table is an illustration of the logic found in Table 0064.
     <br/>
-			</td>
-		</tr>
-	</tbody>
+   </td>
+  </tr>
+ </tbody>
 </table>
 <p>
-	<br/>
+ <br/>
 </p>
 <p>
  Note that a person can't be eligible for VFC and a state program for the same immunization. That is, only one eligibility should apply to a given immunization.
 </p>
 <p>
-	<br/>
+ <br/>
 </p>
 <table style="width: 100%;">
-	<tbody>
-		<tr>
-			<td class="fr-thick" colspan="3" style="width: 99.9308%; text-align: center;">
-				<strong>
+ <tbody>
+  <tr>
+   <td class="fr-thick" colspan="3" style="width: 99.9308%; text-align: center;">
+    <strong>
      TABLE A-3 ELIGIBILITY CRITERIA
     </strong>
-			</td>
-		</tr>
-		<tr>
-			<td class="fr-thick" style="width: 33.3333%; text-align: center;">
-				<strong>
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 33.3333%; text-align: center;">
+    <strong>
      Determined Patient Eligibility
     </strong>
-			</td>
-			<td class="fr-thick" style="width: 33.3333%; text-align: center;">
-				<strong>
+   </td>
+   <td class="fr-thick" style="width: 33.3333%; text-align: center;">
+    <strong>
      Vaccine Type Eligibility
     </strong>
-			</td>
-			<td class="fr-thick" style="width: 33.3333%; text-align: center;">
-				<strong>
+   </td>
+   <td class="fr-thick" style="width: 33.3333%; text-align: center;">
+    <strong>
      Record For Patient Eligibility For Vaccine Dose Administered
     </strong>
-			</td>
-		</tr>
-		<tr>
-			<td class="fr-thick" style="width: 33.3333%;">
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 33.3333%;">
     VFC eligible (V02-V05)
    </td>
-			<td class="fr-thick" style="width: 33.3333%;">
+   <td class="fr-thick" style="width: 33.3333%;">
     Vaccine type is eligible for VFC (e.g. DTAP, MMR, etc.)
    </td>
-			<td class="fr-thick" style="width: 33.3333%;">
+   <td class="fr-thick" style="width: 33.3333%;">
     V02-V05
    </td>
-		</tr>
-		<tr>
-			<td class="fr-thick" style="width: 33.3333%;">
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 33.3333%;">
     Any patient eligibility reason
    </td>
-			<td class="fr-thick" style="width: 33.3333%;">
+   <td class="fr-thick" style="width: 33.3333%;">
     Vaccine type is not eligible for VFC ( e.g. Yellow fever)
    </td>
-			<td class="fr-thick" style="width: 33.3333%;">
+   <td class="fr-thick" style="width: 33.3333%;">
     V01
     <br/>
-			</td>
-		</tr>
-		<tr>
-			<td class="fr-thick" style="width: 33.3333%;">
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 33.3333%;">
     Not VFC eligible (V01) and no state or local program applies.
     <br/>
-			</td>
-			<td class="fr-thick" style="width: 33.3333%;">
+   </td>
+   <td class="fr-thick" style="width: 33.3333%;">
     Any
    </td>
-			<td class="fr-thick" style="width: 33.3333%;">
+   <td class="fr-thick" style="width: 33.3333%;">
     V01
     <br/>
-			</td>
-		</tr>
-		<tr>
-			<td class="fr-thick" style="width: 33.3333%;">
+   </td>
+  </tr>
+  <tr>
+   <td class="fr-thick" style="width: 33.3333%;">
     Eligible for state or local vaccine program and not eligible for VFC
     <br/>
-			</td>
-			<td class="fr-thick" style="width: 33.3333%;">
+   </td>
+   <td class="fr-thick" style="width: 33.3333%;">
     Vaccine is eligible for state or local program.
    </td>
-			<td class="fr-thick" style="width: 33.3333%;">
+   <td class="fr-thick" style="width: 33.3333%;">
     State or local eligibility code
     <br/>
-			</td>
-		</tr>
-	</tbody>
+   </td>
+  </tr>
+ </tbody>
 </table>
 <p>
-	<br/>
+ <br/>
 </p>
 <p>
  The funding programs listed in table HL70064 are those associated with the Vaccines for Children program. Local funding program eligibility would be published in the local Implementation Guide in table 0064. The code V07 may be used if the person is not eligible for VFC funding program but is eligible or a state or local funding program. The use of locally specified codes may be preferable to provide more granular information. If a locally defined funding program eligibility code is sent, then the person is presumed to be not eligible for VFC funded vaccine.
 </p>
 <p>
-	<br/>
+ <br/>
 </p>
 <table style="width: 100%;">
-	<tbody>
-		<tr>
-			<td class="fr-thick" style="width: 100.0000%;">
-				<p>
+ <tbody>
+  <tr>
+   <td class="fr-thick" style="width: 100.0000%;">
+    <p>
      The coding scheme uses codes in table HL70363 to indicate the assigning authority. The code is composed of the code from table HL70363 and 2 character number assigned by the state (The state may add to this list for other local assigning authorities.)
     </p>
-				<p>
+    <p>
      For example, if Alaska had a funding program and the person and vaccination met the eligibility criteria, the code in OBX-5 would be as follows:
     </p>
-				<p>
-					<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+    <p>
+     <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
       |AKA01^Alaska special eligibility^AKA|
      </span>
-				</p>
-				<p>
+    </p>
+    <p>
      AKA01 is the code. AKA in the third triplet is the assigning authority. The text is the second triplet is not processed and so may be any text.
     </p>
-			</td>
-		</tr>
-	</tbody>
+   </td>
+  </tr>
+ </tbody>
 </table>
 <p>
-	<br/>
+ <br/>
 </p>
 <p>
  The OBX segment indicating patient eligibility in association with the dose administered is composed of a number of data elements. OBX-3 indicates that the segment contains patient eligibility status (LOINC 64994-7). OBX-5 indicates the eligibility status. OBX-17 indicates the method of observation (per visit or per immunization).
 </p>
 <p>
-	<br/>
+ <br/>
 </p>
 <table style="width: 100%;">
-	<tbody>
-		<tr>
-			<td class="fr-thick" style="width: 100.0000%;">
+ <tbody>
+  <tr>
+   <td class="fr-thick" style="width: 100.0000%;">
     Technical note on LOINC code 64994-7:
     <br/>
-				<br/>
-				<p>
+    <br/>
+    <p>
      The formal short name for this LOINC code is "Vaccine fund pgm elig cat", this means it is the patient eligibility status associated with a vaccine dose administered.
     </p>
-			</td>
-		</tr>
-	</tbody>
+   </td>
+  </tr>
+ </tbody>
 </table>
 <p>
-	<br/>
+ <br/>
 </p>
 <p>
  The following message fragment indicates that the patient was eligible for VFC vaccine for the associated vaccination because they were Native American/Alaskan Native, and the vaccine administered was an eligible vaccine type. The method of capture was per immunization.
 </p>
 <p>
-	<br/>
+ <br/>
 </p>

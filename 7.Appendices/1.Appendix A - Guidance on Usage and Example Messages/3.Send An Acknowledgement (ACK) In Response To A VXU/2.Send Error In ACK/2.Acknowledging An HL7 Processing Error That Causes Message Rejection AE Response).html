@@ -2,10 +2,10 @@
  There are a number of errors that may cause message rejection when processing an HL7 message that are based on HL7 rules.
 </p>
 <ul>
-	<li>
+ <li>
   Empty or missing required (R) segment group
  </li>
-	<li>
+ <li>
   Empty or missing PID segment or MSH segment (Required segments not in segment group)
  </li>
 </ul>
@@ -13,25 +13,25 @@
  The following example reports that the PID-5 (patient name) was missing. It is a required field. This leads to rejection of the PID segment. Because this is an error, the MSA-1 reports an error ("AE"). This error caused the receiving system to identify this as a serious error with data loss. ERR-4 (severity) is set to "E". Note that ERR-8 contains a free text note about the error. These are generated locally by the responding system. They may be standardized locally.
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   MSH|^~\&amp;|DCS|MYIIS|MYIIS||200906040000-0500||ACK^V04^ACK|13434534|P|2.5.1||| &lt;CR&gt;
  </span>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   MSA|AE|9299381&lt;CR&gt;
  </span>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   ERR||PID^1^5|101^required field missing^HL70357|E|7^required data Missing^HL70533||||Patient name is required &lt;CR&gt;
  </span>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   ERR||PID|100^required segment missing^HL70357|E||||PID is required segment. Message rejected &lt;CR&gt;
  </span>
 </p>
 <p>
-	<br/>
+ <br/>
 </p>
