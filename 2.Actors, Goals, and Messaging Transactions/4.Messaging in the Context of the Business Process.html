@@ -5,71 +5,71 @@
  The following diagram illustrates the most common message exchange in the IIS context, the VXU (unsolicited immunization record). When the sending system wishes to send a VXU to a receiving system, it must do several steps in preparation:
 </p>
 <ul>
- <li>
+	<li>
   Create message
   <sup>
    11
   </sup>
-  <ul>
-   <li>
+		<ul>
+			<li>
     Assemble data on person of interest
    </li>
-   <li>
+			<li>
     Build the VXU message with this data
    </li>
-  </ul>
- </li>
- <li>
+		</ul>
+	</li>
+	<li>
   Send the message
   <ul>
-   <li>
+			<li>
     Connect to the receiving system. The partners must agree on how this is done.
    </li>
-   <li>
+			<li>
     The sending system now sends the message over the connection and the receiving system catches the message.
    </li>
-  </ul>
- </li>
+		</ul>
+	</li>
 </ul>
 <p>
  The receiver accomplishes the following steps:
 </p>
 <ul>
- <li>
+	<li>
   Process the received message
   <ul>
-   <li>
+			<li>
     Determine that the message is in the appropriate format.
    </li>
-   <li>
+			<li>
     Parse the message into a format that it uses.
    </li>
-   <li>
+			<li>
     Evaluate the message components to determine that these are correctly formatted and specified.
    </li>
-  </ul>
- </li>
- <li>
+		</ul>
+	</li>
+	<li>
   Send an acknowledgement to the sender, indicating the message has been successfully processed.
  </li>
- <li>
+	<li>
   Integrate the received record into the existing data base.
   <sup>
    12
   </sup>
-  <ul>
-   <li>
+		<ul>
+			<li>
     Deduplicate on client to be sure that each client only has one record.
    </li>
-   <li>
+			<li>
     Deduplicate the events (immunizations, for instance).
    </li>
-   <li>
+			<li>
     Insert or update data.
    </li>
-  </ul>
- </li>
- <li>
+		</ul>
+	</li>
+	<li>
   The sending system accepts the acknowledgment and processes it.
  </li>
 </ul>
@@ -87,31 +87,31 @@
  When illustrating the processes involved in each message below, we will not elaborate on the processes that occur outside the actual message exchange.
 </p>
 <p>
- <img class="fr-fic fr-dib" src="/api/storage/file?name=b7d99d0d-e9b0-4947-aca9-1f8de6e00db7.png" style="width: 300px;"/>
+	<img class="fr-fic fr-dib" src="/api/storage/file?name=b7d99d0d-e9b0-4947-aca9-1f8de6e00db7.png" style="width: 300px;"/>
 </p>
 <p style="text-align: center;">
- <strong>
-  <span style="font-size: 12px;">
+	<strong>
+		<span style="font-size: 12px;">
    Figure 2 VXU Process Model
   </span>
- </strong>
+	</strong>
 </p>
 <p style="text-align: center;">
- <br/>
+	<br/>
 </p>
 <table style="width: 100%;">
- <tbody>
-  <tr>
-   <td class="fr-thick" style="width: 100.0000%;">
-    <strong>
+	<tbody>
+		<tr>
+			<td class="fr-thick" style="width: 100.0000%;">
+				<strong>
      Note:
     </strong>
     It is vital that each implementation clearly document the business rules and special handling in a local Implementation Guide or Profile. Local implementers may place further constraints on the specifications found in this Guide. Optional fields or required fields that are allowed to be empty in this Guide may be made required. Repeating fields may be constrained to fewer repetitions.
     <br/>
-   </td>
-  </tr>
- </tbody>
+			</td>
+		</tr>
+	</tbody>
 </table>
 <p>
- <br/>
+	<br/>
 </p>

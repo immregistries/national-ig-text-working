@@ -2,118 +2,118 @@
  The following activity diagram illustrates the process of sending and receiving an immunization history. It is meant to be illustrative and not prescriptive. With the exception of the HL7 message structure processing and the return of an acknowledgement, the activities are based on local business rules. These rules must be documented for smooth interoperability. HL7 only addresses the messages, VXU and ACK.
 </p>
 <p>
- <br/>
+	<br/>
 </p>
 <p style="text-align: center;">
- <img class="fr-fic fr-dib" src="/api/storage/file?name=b2b0da4d-c73b-4028-872c-698730424d23.png" style="width: 300px;"/>
- <strong>
-  <span style="font-size: 12px;">
+	<img class="fr-fic fr-dib" src="/api/storage/file?name=b2b0da4d-c73b-4028-872c-698730424d23.png" style="width: 300px;"/>
+	<strong>
+		<span style="font-size: 12px;">
    Figure A-1 VXU Business Process
   </span>
- </strong>
+	</strong>
 </p>
 <ol>
- <li>
+	<li>
   The process for sending a VXU (Immunization history) begins with the sending system building the VXU message.
  </li>
- <li>
+	<li>
   The sending system connects to the receiving system and sends the VXU.
  </li>
- <li>
+	<li>
   The receiving system accepts the message.
  </li>
- <li>
+	<li>
   The receiving system parses the message and validates.
   <ol>
-   <li>
+			<li>
     Determine if message meets HL7 rules
    </li>
-   <li>
+			<li>
     Validate based on local business rules
     <sup>
      30
     </sup>
-   </li>
-  </ol>
- </li>
- <li>
+			</li>
+		</ol>
+	</li>
+	<li>
   Seek matching client in receiver data base
   <ol>
-   <li>
+			<li>
     No match is found
     <sup>
      31
     </sup>
-    <ol>
-     <li>
+				<ol>
+					<li>
       Add the client to the receiver database.
      </li>
-     <li>
+					<li>
       Send acknowledgement message
       <sup>
        32
       </sup>
-     </li>
-    </ol>
-   </li>
-   <li>
+					</li>
+				</ol>
+			</li>
+			<li>
     Exactly one match found
     <ol>
-     <li>
+					<li>
       Determine if client in receiver data base has indicated that his/her data is to be protected (protection indicator = Y)
       <sup>
        33
       </sup>
-     </li>
-     <li>
+					</li>
+					<li>
       Protection indicator = Y
       <ol>
-       <li>
+							<li>
         Do not integrate record into receiver data base
        </li>
-       <li>
+							<li>
         Send acknowledgement
         <sup>
          34
         </sup>
-       </li>
-      </ol>
-     </li>
-     <li>
+							</li>
+						</ol>
+					</li>
+					<li>
       Protection indicator = N
       <ol>
-       <li>
+							<li>
         Based on local business rules, integrate incoming record into receiver data base.
        </li>
-       <li>
+							<li>
         Send acknowledgement
        </li>
-      </ol>
-     </li>
-    </ol>
-   </li>
-   <li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+			<li>
     More than one match found
     <ol>
-     <li>
+					<li>
       Send acknowledgement
       <sup>
        35
       </sup>
-     </li>
-    </ol>
-   </li>
-  </ol>
- </li>
- <li>
+					</li>
+				</ol>
+			</li>
+		</ol>
+	</li>
+	<li>
   Send acknowledgment to sending system
  </li>
- <li>
+	<li>
   Sending system accepts acknowledgement message
   <sup>
    36
   </sup>
- </li>
+	</li>
 </ol>
 <p>
  Note that sending system may indicate that it does not accept acknowledgement messages. In this case, no acknowledgement is returned. This is not recommended.
@@ -125,21 +125,21 @@
  The following example messages represent straightforward immunization history messages. They do not illustrate dealing with specific use cases, such as messaging reactions, client specific conditions or vaccine forecasts. Clearly, these may be components of a VXU, but will be addressed separately to simplify the messages.
 </p>
 <p>
- <br/>
+	<br/>
 </p>
 <table style="width: 100%;">
- <tbody>
-  <tr>
-   <td class="fr-thick" style="width: 100.0000%;">
+	<tbody>
+		<tr>
+			<td class="fr-thick" style="width: 100.0000%;">
     It is important to reiterate here that conformant systems should be able to successfully populate and process the VXU message segments and fields identified as Required or Required but may be empty. They should be able to populate and process conditional items when the predicate conditions are met. If segments or fields are optionally repeating, they should be able to gracefully handle the repetitions. Systems that do not conform to these expectations risk missed data.
     <br/>
-   </td>
-  </tr>
- </tbody>
+			</td>
+		</tr>
+	</tbody>
 </table>
 <p>
- <br/>
+	<br/>
 </p>
 <p>
- <br/>
+	<br/>
 </p>

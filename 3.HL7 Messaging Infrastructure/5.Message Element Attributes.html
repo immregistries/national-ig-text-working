@@ -2,205 +2,205 @@
  The following describe how message specifications will be illustrated in this Guide. These terms will be used in the tables specifying messages throughout this Guide.
 </p>
 <p>
- <br/>
+	<br/>
 </p>
 <table style="width: 100%;">
- <tbody>
-  <tr>
-   <td class="fr-thick" colspan="2" style="width: 99.9308%; text-align: center;">
-    <strong>
+	<tbody>
+		<tr>
+			<td class="fr-thick" colspan="2" style="width: 99.9308%; text-align: center;">
+				<strong>
      TABLE 3-3 MESSAGE ELEMENT ATTRIBUTES
     </strong>
-   </td>
-  </tr>
-  <tr>
-   <td class="fr-thick" style="width: 50%; text-align: center;">
-    <strong>
+			</td>
+		</tr>
+		<tr>
+			<td class="fr-thick" style="width: 50%; text-align: center;">
+				<strong>
      Abbreviation
     </strong>
-   </td>
-   <td class="fr-thick" style="width: 50%; text-align: center;">
-    <strong>
+			</td>
+			<td class="fr-thick" style="width: 50%; text-align: center;">
+				<strong>
      Description
     </strong>
-   </td>
-  </tr>
-  <tr>
-   <td class="fr-thick" style="width: 50.0000%;">
+			</td>
+		</tr>
+		<tr>
+			<td class="fr-thick" style="width: 50.0000%;">
     SEQ
    </td>
-   <td class="fr-thick" style="width: 50.0000%;">
+			<td class="fr-thick" style="width: 50.0000%;">
     Sequence of the elements (fields) as they are numbered in the HL7 message element. The SEQ attribute applies to the data type attribute table and the segment attribute table.
     <br/>
-   </td>
-  </tr>
-  <tr>
-   <td class="fr-thick" style="width: 50.0000%;">
+			</td>
+		</tr>
+		<tr>
+			<td class="fr-thick" style="width: 50.0000%;">
     Segment
    </td>
-   <td class="fr-thick" style="width: 50.0000%;">
+			<td class="fr-thick" style="width: 50.0000%;">
     Three-character code for the segment and the abstract syntax (i.e., the square and curly braces)
     <p>
      [ XXX ] Optional
     </p>
-    <p>
+				<p>
      { XXX } Repeating
     </p>
-    <p>
+				<p>
      XXX Required (not inside any braces)
     </p>
-    <p>
+				<p>
      [{ XXX }] Optional and Repeating
     </p>
-    <p>
+				<p>
      [ Begin segment group
     </p>
-    <p>
+				<p>
      XXX
     </p>
-    <p>
+				<p>
      [YYY]
     </p>
-    <p>
+				<p>
      ] End segment group
     </p>
-    <p>
+				<p>
      YYY is nested within the segment block starting with XXX. It is an optional sub-segment to XXX.
      <sup>
       21
      </sup>
      The whole block is optional.
     </p>
-    <p>
+				<p>
      Note that for Segment Groups there will not be a segment code present, but the square and curly braces will still be present. The square and curly braces are not part of the HL7 message and exist only in the documentation in order to define the Segment Groups.
     </p>
-   </td>
-  </tr>
-  <tr>
-   <td class="fr-thick" style="width: 50.0000%;">
+			</td>
+		</tr>
+		<tr>
+			<td class="fr-thick" style="width: 50.0000%;">
     Conditional predicate
    </td>
-   <td class="fr-thick" style="width: 50.0000%;">
+			<td class="fr-thick" style="width: 50.0000%;">
     Logic for determining the usage of conditional usage for an element.
     <br/>
-   </td>
-  </tr>
-  <tr>
-   <td class="fr-thick" style="width: 50.0000%;">
+			</td>
+		</tr>
+		<tr>
+			<td class="fr-thick" style="width: 50.0000%;">
     Data Type
     <br/>
-   </td>
-   <td class="fr-thick" style="width: 50.0000%;">
+			</td>
+			<td class="fr-thick" style="width: 50.0000%;">
     Data type used for HL7 element. Data type specifications can be found in Chapter 4.
     <br/>
-   </td>
-  </tr>
-  <tr>
-   <td class="fr-thick" style="width: 50.0000%;">
+			</td>
+		</tr>
+		<tr>
+			<td class="fr-thick" style="width: 50.0000%;">
     Usage
     <br/>
-   </td>
-   <td class="fr-thick" style="width: 50.0000%;">
+			</td>
+			<td class="fr-thick" style="width: 50.0000%;">
     Usage of the message element for this profile. Indicates whether the message element (segment, segment group, field, component, or subcomponent) is R, RE, O, X or C(a/b) in the corresponding message element. Usage applies to the message attribute table, data type attribute table and the segment attribute table.
     <br/>
-   </td>
-  </tr>
-  <tr>
-   <td class="fr-thick" style="width: 50.0000%;">
+			</td>
+		</tr>
+		<tr>
+			<td class="fr-thick" style="width: 50.0000%;">
     Cardinality
     <br/>
-   </td>
-   <td class="fr-thick" style="width: 50.0000%;">
-    <p>
+			</td>
+			<td class="fr-thick" style="width: 50.0000%;">
+				<p>
      Indicator of the minimum and maximum number of times the element may appear.
     </p>
-    <p>
+				<p>
      [0..0] Element never present.
     </p>
-    <p>
+				<p>
      [0..1] Element may be omitted and can have at most, one occurrence.
     </p>
-    <p>
+				<p>
      [1..1] Element must have exactly one occurrence.
     </p>
-    <p>
+				<p>
      [0..n] Element may be omitted or may repeat up to n times.
     </p>
-    <p>
+				<p>
      [1..n] Element must appear at least once, and may repeat up to n times.
     </p>
-    <p>
+				<p>
      [0..*] Element may be omitted or repeat for an unlimited number of times.
     </p>
-    <p>
+				<p>
      [1..*] Element must appear at least once, and may repeat unlimited number of times.
     </p>
-    <p>
+				<p>
      [m..n] Element must appear at least m and, at most, n times.
     </p>
-    <p>
+				<p>
      Cardinality applies only to message attribute tables and segment attribute tables.
     </p>
-   </td>
-  </tr>
-  <tr>
-   <td class="fr-thick" style="width: 50.0000%;">
+			</td>
+		</tr>
+		<tr>
+			<td class="fr-thick" style="width: 50.0000%;">
     Value Set
     <br/>
-   </td>
-   <td class="fr-thick" style="width: 50.0000%;">
+			</td>
+			<td class="fr-thick" style="width: 50.0000%;">
     The set of coded values to be used with the field. The value set attribute applies only to the data type attribute tables and the segment attribute tables. The value set may equate with an entire code system part of a code system, or codes drawn from multiple code systems.
     <br/>
-   </td>
-  </tr>
-  <tr>
-   <td class="fr-thick" style="width: 50.0000%;">
+			</td>
+		</tr>
+		<tr>
+			<td class="fr-thick" style="width: 50.0000%;">
     HL7 Element Name
     <br/>
-   </td>
-   <td class="fr-thick" style="width: 50.0000%;">
+			</td>
+			<td class="fr-thick" style="width: 50.0000%;">
     HL7 descriptor of the element in the segment.
     <br/>
-   </td>
-  </tr>
-  <tr>
-   <td class="fr-thick" style="width: 50.0000%;">
+			</td>
+		</tr>
+		<tr>
+			<td class="fr-thick" style="width: 50.0000%;">
     Description /Comment
    </td>
-   <td class="fr-thick" style="width: 50.0000%;">
+			<td class="fr-thick" style="width: 50.0000%;">
     Context and usage for the element. Description/Comments applies to the message attribute table, data type attribute table and the segment attribute table.
     <br/>
-   </td>
-  </tr>
- </tbody>
+			</td>
+		</tr>
+	</tbody>
 </table>
 <hr/>
 <p>
- <sup>
+	<sup>
   17
  </sup>
  A segment is not expected if it has been deprecated or is unsupported. A segment that does not belong in the message is also not expected.
 </p>
 <p>
- <sup>
+	<sup>
   18
  </sup>
  Client name may never be empty or null, for instance. The NVAC core data elements are listed in the beginning of Appendix B.
 </p>
 <p>
- <sup>
+	<sup>
   19
  </sup>
  There are multiple interpretations of "RE" when a value is known. One is "the capability must always be supported and a value is sent if known", the other is the capability must always be supported and a value may or may not be sent even when known based on a condition external to the profile specification. The condition may be noted in the profile but cannot be processed automatically. This is what can be interpreted from the "relevant" part of the definition. Regardless of the interpretation of the "RE" usage code, a set of test circumstances can be developed to sufficiently test the "RE" element. See the "Conformity Assessment of Conformance Constructs" section for more details.
 </p>
 <p>
- <sup>
+	<sup>
   20
  </sup>
  Processing does not necessarily require permanent storage of the required element. For instance, OBX-4 (sub-id) is used to group associated OBX segments, but will probably not be stored.
 </p>
 <p>
- <sup>
+	<sup>
   21
  </sup>
  YYY may only be included if XXX is present. XXX may be present without YYY.
