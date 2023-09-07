@@ -37,10 +37,10 @@
  The preferred method for indicating VIS type is based on a scanned bar code of a Global Document Type Identifier (GDTI). The GDTI is composed of a document owner, an application, a document type identifier and a check digit. The fully encoded text string of the GDTI will be sent in an OBX segment. The mapping of the fully encoded string will be found in a table supported by the CDC. The publication date maybe inferred from the fully encoded GDTI. Therefore, only the presentation date and GDTI need to be sent.
 </p>
 <p>
- Two methods exist to transmit information in an HL7 message describing the VIS document(s) presented to patients or the legal guardians. The first involves the use of 2D VIS barcode data strings, “VIS Fully-encoded text string”, while the second involves the identification of the vaccine type or group along with the VIS publication date. The use of the VIS Fully-encoded text string is highly recommended when messaging VIS information. The alternative of using the vaccine type, publication date and presentation date LOINC codes is problematic and fails in several use cases including when sending manufacturer specific VIS information (such as for HPV) or when sending the Multiple Vaccines VIS document. It is anticipated that this second method will be retired in a future release of the implementation guide. (Note: Scanning does not need to be used for this first method to work.)
+ Two methods exist to transmit information in an HL7 message describing the VIS document(s) presented to patients or the legal guardians. The first involves the use of 2D VIS barcode data strings, "VIS Fully-encoded text string", while the second involves the identification of the vaccine type or group along with the VIS publication date. The use of the VIS Fully-encoded text string is highly recommended when messaging VIS information. The alternative of using the vaccine type, publication date and presentation date LOINC codes is problematic and fails in several use cases including when sending manufacturer specific VIS information (such as for HPV) or when sending the Multiple Vaccines VIS document. It is anticipated that this second method will be retired in a future release of the implementation guide. (Note: Scanning does not need to be used for this first method to work.)
 </p>
 <p>
- The 13 digit Global Document Type Identifier (GDTI) is used to identify a document type while the 24 digit VIS Fully-encoded text string begins with “253” and includes the GDTI as well as the publication date. The VIS Fully-encoded text string represents a particular version of the VIS document. The Implementation Guide currently says that the publication date may be inferred from the fully encoded GDTI. The term “fully encoded GDTI” here refers to the VIS Fully-encoded text string (24 digits) and not the 13 digit GDTI. As stated, it is the VIS Fully-encoded text string and not the GDTI that should be sent in OBX-5. The GDTI, Fully-encoded text string, and Edition Date are available in the VIS Lookup Table (http://www.cdc.gov/vaccines/programs/iis/code-sets/vis-barcode-lookup-table.html).
+ The 13 digit Global Document Type Identifier (GDTI) is used to identify a document type while the 24 digit VIS Fully-encoded text string begins with "253" and includes the GDTI as well as the publication date. The VIS Fully-encoded text string represents a particular version of the VIS document. The Implementation Guide currently says that the publication date may be inferred from the fully encoded GDTI. The term "fully encoded GDTI" here refers to the VIS Fully-encoded text string (24 digits) and not the 13 digit GDTI. As stated, it is the VIS Fully-encoded text string and not the GDTI that should be sent in OBX-5. The GDTI, Fully-encoded text string, and Edition Date are available in the VIS Lookup Table (http://www.cdc.gov/vaccines/programs/iis/code-sets/vis-barcode-lookup-table.html).
 </p>
 <p>
 	<strong>
@@ -72,7 +72,7 @@
 </p>
 <p>
 	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
-  RXA|0|1|20091010||94^MMRV^CVX|…
+  RXA|0|1|20091010||94^MMRV^CVX|
  </span>
 </p>
 <p>
