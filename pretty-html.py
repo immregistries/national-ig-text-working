@@ -25,4 +25,5 @@ def prettify_html(dir_path):
 current_directory = os.getcwd()
 print('Will prettify data from this directory: ' + current_directory)
 
-prettify_html(current_directory)
+# Commenting out, this function is converting html entities such as &mdash; to their unicode equivalents
+# prettify_html(current_directory)
