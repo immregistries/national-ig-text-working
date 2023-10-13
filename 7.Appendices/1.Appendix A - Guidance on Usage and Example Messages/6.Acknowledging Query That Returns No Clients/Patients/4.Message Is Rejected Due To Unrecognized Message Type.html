@@ -2,12 +2,12 @@
  When a message is received that is an unrecognized message type, the response is an ACK with AR in the MSA-1 (Acknowledgement Code)
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   MSH|^~\&amp;|MYIIS|MyStateIIS||MYEHR|200911301000-0500||ACK^Q11^ACK||P &lt;CR&gt;
  </span>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   MSA|AR|&lt;CR&gt;
  </span>
 </p>
@@ -16,93 +16,93 @@
 </p>
 <hr/>
 <p>
-	<sup>
+ <sup>
   28
  </sup>
  Support Status indicates whether the field must be supported by the information system and messaged if known. It does not indicate whether all messages must contain the data element. That is indicated in the usage column for each field.
 </p>
 <p>
-	<sup>
+ <sup>
   29
  </sup>
  PD1-16 indicates the status from the message sender's perspective. In the case of a message coming from a provider, it indicates if the client is an active patient of that sender.
 </p>
 <p>
-	<sup>
+ <sup>
   30
  </sup>
  See Send Error in ACK for dealing with errors if either of these two tasks identifies problems.
 </p>
 <p>
-	<sup>
+ <sup>
   31
  </sup>
  Local business rules determine what happens next, but we assume that it is a simple insert of the client record. The receiving system may require review and confirmation prior to insertion. Other systems may choose to require human review before adding to data base.
 </p>
 <p>
-	<sup>
+ <sup>
   32
  </sup>
  See Send Acknowledgement with no error.
 </p>
 <p>
-	<sup>
+ <sup>
   33
  </sup>
  Locally, this may be known as the sharing indicator. In this case, the equivalent value is sharing = N.
 </p>
 <p>
-	<sup>
+ <sup>
   34
  </sup>
  Local business rules may vary. In general, the acknowledgement may reject the client record, but not indicate the existence of the client record in the receiver system.
 </p>
 <p>
-	<sup>
+ <sup>
   35
  </sup>
  Local business rules will determine how the multiple matches are to be handled. The record could be put into a pending state, rejected outright, loaded in as a new record for clean up later.
 </p>
 <p>
-	<sup>
+ <sup>
   36
  </sup>
  The sending system response to an acknowledgement message (ACK) is locally determined. Good practice would be to have a way to use the ACK to alert user to outcome and to allow trouble-shooting of problem messages.
 </p>
 <p>
-	<sup>
+ <sup>
   37
  </sup>
-	<a href="http://www.aira.browsermedia.com/resources/AIRA-MIROW_DQA_Selected_Aspects_best_practice_guide_05-17-2013.pdf">
+ <a href="http://www.aira.browsermedia.com/resources/AIRA-MIROW_DQA_Selected_Aspects_best_practice_guide_05-17-2013.pdf">
   http://www.aira.browsermedia.com/resources/AIRA-MIROW_DQA_Selected_Aspects_best_practice_guide_05-17-2013.pdf
  </a>
 </p>
 <p>
-	<sup>
+ <sup>
   38
  </sup>
  The other approaches will not be further illustrated here.
 </p>
 <p>
-	<sup>
+ <sup>
   39
  </sup>
  This does not mean that every message must have one of the required OBX. It just means that this concept needs to be known to put the evaluation and forecast in context.
 </p>
 <p>
-	<sup>
+ <sup>
   40
  </sup>
  Vaccine type 30956-7 is preferred, but support for 38890-0 is needed to support backward compatibility.
 </p>
 <p>
-	<sup>
+ <sup>
   41
  </sup>
  All of the related observations are linked to the vaccine group using the OBX-4, observation sub-id.
 </p>
 <p>
-	<sup>
+ <sup>
   42
  </sup>
  All of the related observations are linked to the vaccine group using the OBX-4, observation sub-id.

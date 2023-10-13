@@ -1,1 +1,94 @@
-<p>Systems may choose to send messages in batches. A batch begins with a batch header statement (BHS) and ends with a Batch Trailer Segment. Batches may in turn be batched into files of batches using File Header Statement and File Trailer statement. If a system is sending a single batch, the FHS/FTS is not necessary. A stream of messages may be sent without use of either BHS or FHS.</p><p>The generic layout of a batch message is as follows:</p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">BHS</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">VXU</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">VXU</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">&hellip;</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">BTS</span></p><p>Similarly, a file of batches is laid out as follows:</p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">FHS</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">BHS</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">VXU</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">VXU</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">&hellip;</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">BTS</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">BHS</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">VXU</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">&hellip;</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">BTS</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">&hellip;</span></p><p style="margin-left: 20px;"><span style="font-family: Times New Roman,Times,serif,-webkit-standard;">FTS</span></p>
+<p>
+ Systems may choose to send messages in batches. A batch begins with a batch header statement (BHS) and ends with a Batch Trailer Segment. Batches may in turn be batched into files of batches using File Header Statement and File Trailer statement. If a system is sending a single batch, the FHS/FTS is not necessary. A stream of messages may be sent without use of either BHS or FHS.
+</p>
+<p>
+ The generic layout of a batch message is as follows:
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  BHS
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  VXU
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  VXU
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  &hellip;
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  BTS
+ </span>
+</p>
+<p>
+ Similarly, a file of batches is laid out as follows:
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  FHS
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  BHS
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  VXU
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  VXU
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  &hellip;
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  BTS
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  BHS
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  VXU
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  &hellip;
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  BTS
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  &hellip;
+ </span>
+</p>
+<p style="margin-left: 20px;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  FTS
+ </span>
+</p>

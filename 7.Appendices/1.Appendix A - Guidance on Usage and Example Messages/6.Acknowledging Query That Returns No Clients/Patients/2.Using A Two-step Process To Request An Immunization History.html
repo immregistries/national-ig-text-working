@@ -23,14 +23,14 @@
  The following diagram illustrates the use of the PIX query to get a pre-registered patient identifier. This requires that the cross-referenced identifiers are registered using the ADT message.
 </p>
 <p>
-	<img class="fr-fic fr-dib" src="/api/storage/file?name=a20a6b0d-b7f4-4589-907e-bffe3751fd0a.png" style="width: 300px;"/>
+ <img class="fr-fic fr-dib" src="/api/storage/file?name=a20a6b0d-b7f4-4589-907e-bffe3751fd0a.png" style="width: 300px;"/>
 </p>
 <p style="text-align: center;">
-	<strong>
-		<span style="font-size: 12px;">
+ <strong>
+  <span style="font-size: 12px;">
    Figure A-4 Sequence Diagram: Two-Step Request
   </span>
-	</strong>
+ </strong>
 </p>
 <p>
  Note that this interaction is simplified. The initiating system sends a request for a patient identifier. The request includes one identifier in a PID-3. The identity supplier looks for a matching identifier of interest and returns it along with the patient name (PID-5). This information is included in the request immunization history query (QBP^Q11). Assuming that the identifier used is the one in the immunization history supplier, there should be a one to one match.
@@ -42,16 +42,16 @@
  The following diagram illustrates the use of PDQ to obtain an id and how this would be used to request an immunization record. The record seeker uses a Patient Demographic Query (PDQ) to a Master Person Index (MPI), requesting the identifiers for the person of interest. The MPI finds the person of interest and returns the demographic information and identifiers. The record seeker system uses this information to create a request for immunization history, which it sends to the record source. The record source uses this information to find the immunization history for the person of interest.
 </p>
 <p style="text-align: center;">
-	<img class="fr-fic fr-dib" src="/api/storage/file?name=4f3003c7-ed2b-4c70-a04f-040ec79bc00e.png" style="width: 300px;"/>
-	<strong>
-		<span style="font-size: 12px;">
+ <img class="fr-fic fr-dib" src="/api/storage/file?name=4f3003c7-ed2b-4c70-a04f-040ec79bc00e.png" style="width: 300px;"/>
+ <strong>
+  <span style="font-size: 12px;">
    Figure A-5 Sequence Diagram: Request Immunization History Using PDQ
   </span>
-	</strong>
+ </strong>
 </p>
 <p>
  Note that this interaction is simplified. The client of interest would be selected, and that client's information would populate the query requesting an immunization history. To be assured of success, the record source system would need to have registered the person in the MPI. In that way the person id in the record source would be available in the MPI.
 </p>
 <p>
-	<br/>
+ <br/>
 </p>
