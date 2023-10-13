@@ -14,7 +14,7 @@ def prettify_html(dir_path):
                     with open(file_path, 'r') as f:
                         soup = BeautifulSoup(f, 'html.parser')
 
-                    pretty_html = soup.prettify()
+                    pretty_html = soup.prettify(formatter="html")
 
                     with open(file_path, 'w') as f:
                         f.write(pretty_html)
