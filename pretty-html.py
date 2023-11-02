@@ -14,11 +14,12 @@ def prettify_html(dir_path):
                     with open(file_path, 'r') as f:
                         soup = BeautifulSoup(f, 'html.parser')
 
-                    pretty_html = soup.prettify()
+                    pretty_html = soup.prettify(formatter="html")
 
                     with open(file_path, 'w') as f:
                         f.write(pretty_html)
                     print(f"Reformatted file {file_path}")
+                    
                 except Exception as e:
                     logging.error(f"Error reformatting file {file_path}: {e}")
 
@@ -26,4 +27,4 @@ current_directory = os.getcwd()
 print('Will prettify data from this directory: ' + current_directory)
 
 # Commenting out, this function is converting html entities such as &mdash; to their unicode equivalents
-# prettify_html(current_directory)
+prettify_html(current_directory)

@@ -1,445 +1,445 @@
 <p>
- The table below is a summary of the discussions, decisions, and recommendations of the workgroup and clarifies the resolutions applied in IGAMT and resolutions suggested for future reference.
+ The table below is a summary of the discussions, decisions, and recommendations of the workgroup and clarifies the resolutions applied in IGAMT and resolutions suggested for future reference.&acirc;&euro;&macr;&nbsp;
 </p>
 <p>
-	<br/>
+ <br/>
 </p>
 <table aria-rowcount="25" border="1" data-tablelook="1184" data-tablestyle="MsoNormalTable">
-	<tbody>
-		<tr>
-			<td colspan="3" style="width: 99.9213%;">
-				<strong>
-     Table 11: Summary of Workgroup Clarifications and Resolutions
+ <tbody>
+  <tr>
+   <td colspan="3" style="width: 99.9213%;">
+    <strong>
+     Table 11: Summary of Workgroup Clarifications and Resolutions&acirc;&euro;&macr;&nbsp;
     </strong>
-			</td>
-		</tr>
-		<tr aria-rowindex="1">
-			<td data-celllook="69905">
-				<p>
-     Component
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     Clarification Point
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     Resolution
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="2">
-			<td data-celllook="69905">
-				<p>
-     Conformance Statement
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     For IZ-51, in the National IG, there is a typographical error, which states "ACK^VO4" instead of "ACK^V04"
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The typographical error was fixed in the IG in IGAMT, so IZ-51 now reads "ACK^V04"
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="3">
-			<td data-celllook="69905">
-				<p>
-     Conformance Statement
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     For IZ-31 and IZ-47 in the National IG, state that additional repetitions may be valued with text notes. However, in the IG in IGAMT, these conformance statements do not mention repetitions of text notes.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     Additional repetitions with text notes were not included in the IZ-31 and IZ-37 conformance statements, as IGAMT does not have the functionality to add repetition logic to conformance statements. However, this information is included in the comments section of RXA-9 in the IG in IGAMT.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="4">
-			<td data-celllook="69905">
-				<p>
-     Conformance Statement
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     In the Z44 profile, IZ-27 states that RCP-1 should be constrained to the value "I". However, RCP-1 is a "RE" field, meaning that a value does not need to be submitted.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The IZ-27 conformance statement for the Z44 profile now includes "empty" as a value option.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="5">
-			<td data-celllook="69905">
-				<p>
-     MSA
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     There are two flavors of the MSA segment, which differ by the usage of MSA-5. For profiles Z23, Z31, Z42 the usage of MSA-5 is "O", while for the Z32 profile the usage of MSA-5 is "X".
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     MSA-5 was harmonized to "O" for all profiles, so that there is only one MSA flavor.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="6">
-			<td data-celllook="69905">
-				<p>
-     MSH
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     In the Z22 profile, the value set for MSH-16 is listed as "HL70155 (constrained)", while for all other profiles MSH-16's value set is "HL70155".
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The word "constrained" was removed from the value set for MSH-16 for the Z22 profile to harmonize the MSH flavors.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="7">
-			<td data-celllook="69905">
-				<p>
-     MSH
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     For MSH segments based on the v2.5.1 standard (Profiles Z31, Z32, Z33, Z34, Z42, and Z44), there are 23 fields mentioned in the National IG, however, the v2.5.1 base standard only has 21 fields.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     For these profiles, the v2.7.1 standard is used instead in IGAMT, as the MSH segment of the v2.7.1 standard contains 25 fields. For the extra fields in the v2.7.1 standard (MSH-24 and MSH-25) not needed, they have a usage of "O", allowing local IGs to implement these fields if interested.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="8">
-			<td data-celllook="69905">
-				<p>
-     MSH
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The MSH segments in the different flavors are only different due to the cardinality of MSH-21.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     Since the main differences between the MSH segments were due to cardinality, the MSH profile flavors were collapsed into one flavor, where MSH-21 has a cardinality of [1 .. *]
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="9">
-			<td data-celllook="69905">
-				<p>
-     OBX
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     There is a conflict between OBX-4's data type and conformance statement, as the data type is "ST", while the conformance statement says OBX-4 is a positive integer.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The data type of OBX-4 was changed to "NM" as it is the more appropriate data type.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="10">
-			<td data-celllook="69905">
-				<p>
-     OBX
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     IZ-20 in IGAMT specifies that the sequential numbering of OBX-1 can start within a message or group. However, the National IG specifies that sequential numbering can start within a message.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The Workgroup recommended that numbering could start within a message or group, as implemented in IGAMT.
-    </p>
-				<p>
-     
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="11">
-			<td data-celllook="69905">
-				<p>
-     ORC
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     In the National IG, the differences between the ORC flavors distill down to the usage of ORC-10, with the Z42 profile having a usage of "RE" versus "O" in the rest of the profiles.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     No substantial reason could be determined for the usage of ORC-10 being "RE", thus, to consolidate the number of ORC segment flavors into one, the usage of ORC-10 was changed to "O" for the Z42 profile.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="12">
-			<td data-celllook="69905">
-				<p>
-     QAK
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     There is no conformance statement stating that QAK-3 shall mirror QPD-1, however it is mentioned in the field definition.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     No conformance statement for QAK-3 was implemented, as this is a HL7 base standard rule.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="13">
-			<td data-celllook="69905">
-				<p>
-     QPD
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The data type of QPD-13 is listed as "TS" in Table 7-6 and Table 11-8, however, the data type should be HD.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     Table 7-6 and Table 11-8 in IGAMT are updated with the correct data type information.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="14">
-			<td data-celllook="69905">
-				<p>
-     RCP
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     There are two RCP flavors as defined in the National IG, one for the Z34 profile and one for the Z44 profile. However, the flavor for the Z44 profile was not well defined in the IG and is not applicable the Z44 profile as only one record can be returned.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The Z44 flavor of the RCP segment was removed from this guide and the Z34 profile flavor will be used for the Z34 and Z44 profile.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="15">
-			<td data-celllook="69905">
-				<p>
-     RXA
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     For the RXA segment, the Z42 profile has three fields (RXA-15, RXA-16, and RXA-21) where usage differentiates the profile flavor from the other profiles.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The difference in usage with the Z42 profile is purposeful, as the Z42 was meant by the original National IG authors to have a minimum set of supported data elements. Thus, there are three flavors for the RXA segment, one for the Z22 profile, one for the Z32 profile, and one for the Z42 profile.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="16">
-			<td data-celllook="69905">
-				<p>
-     TQ1
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     In the National IG, there is not a timing group in the Z22 profile, however in IGAMT, there is a timing group.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The National IG should have included a timing group, as it is a part of the base v2 standard. Thus, a timing group was included in the IG in IGAMT.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="17">
-			<td data-celllook="69905">
-				<p>
-     TS_NZ
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The TS_NZ data type, which is contains day and time information, but not time zone information, is used in a few places throughout the National IG. One example is TS_NZ being used in PID-7, patient's date of birth. Thus, patient's date of birth, does not contain time zone related information.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     This issue was discussed, but as this issue has not been brought up previously, nor seems to be an issue for implementers, no changes were made.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="18">
-			<td data-celllook="69905">
-				<p>
-     Value Set
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     In the Addendum, a co-constraint table is referred to for the value set NIP003, however, no co-constraint table is included.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     In IGAMT, co-constraint tables for NIP003 were added for each of the profiles where NIP003 is used.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="19">
-			<td data-celllook="69905">
-				<p>
-     Value Set
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     For OBX-17, the value set is listed as "PNHV_FundingEligibilityObsMethod_IIS", but in the "Value Sets" section of the National IG it is listed as "PHVS_FundingEligibilityObsMethod_IIS".
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     This is a typographical error. The value set for OBX_17 should be listed as "PHVS_FundingEligibilityObsMethod_IIS" and is corrected in the IG in IGAMT.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="20">
-			<td data-celllook="69905">
-				<p>
-     Value Set
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     There are five value sets (HL7 Table 0204 (Organizational Name Type), HL7 Table 0360 (Degree), HL7 Table 0471 (Query Name), PHVS_HistoryofDisease (History of Disease as Evidence of Immunity), and PHVS_ImmunizationProfileIdentifier_IIS (Immunization Profile Identifiers- IIS)) that are mentioned but unbound in the IG.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The workgroup decided to include these value sets in the IG in IGAMT, as including these value sets is unharmful and can provide additional information. It is important to note that three of the value sets (HL7 Table 0204 (Organizational Name Type), HL7 Table 0360 (Degree), HL7 Table 0471 (Query Name)) are not explicitly used in the National IG. While the two other value sets (PHVS_HistoryofDisease (History of Disease as Evidence of Immunity), and PHVS_ImmunizationProfileIdentifier_IIS (Immunization Profile Identifiers- IIS) cannot be bound in IGAMT.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="21">
-			<td data-celllook="69905">
-				<p>
-     XAD
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     For the XAD.7 subcomponent, the usage is listed as "R" in the "HL7 Data Types" section of the National IG, however, within the Z34 and Z44 profiles the XAD data type is defined again and the usage for XAD.7 is "RE"
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The usage of XAD.7 has been changed to "R" throughout the IG in IGAMT.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="22">
-			<td data-celllook="69905">
-				<p>
-     XAD-4
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     XAD.4 has a length of [1 .. 50], but the comment is "two characters USPS codes".
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The length of XAD.4 was changed to [2 .. 2] in the IG in IGAMT to represent USPS state codes which are two characters long.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="23">
-			<td data-celllook="69905">
-				<p>
-     XPN
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     For the XPN.4 subcomponent, the usage is listed as "O" in the "HL7 Data Types" section of the National IG, however, within the Z34 and Z44 profiles, the XPN_M data type is defined again and the usage for XPN_M.4 is "RE".
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The usage of XPN.4 should be "O" throughout the National IG and the usage of XPN.4 was changed accordingly in the IG in IGAMT.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="24">
-			<td data-celllook="69905">
-				<p>
-     XPN_M
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     For the XPN_M.2 subcomponent the usage is listed as "RE" in the "HL7 Data Types" section of the National IG, however, within the Z34 and Z44 profiles, the XPN_M data type is defined again and the usage for XPN_M.2 is "O".
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The usage of XPN_M.2 should be "RE" throughout the National IG and was changed accordingly in the IG in IGAMT.
-    </p>
-			</td>
-		</tr>
-		<tr aria-rowindex="25">
-			<td data-celllook="69905">
-				<p>
-     XTN
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     The description in Tables 7-6 and 11-8 should match the XPN definition in the VXU message and this is a candidate for slicing.
-    </p>
-			</td>
-			<td data-celllook="69905">
-				<p>
-     Due to the goal of making the IG in IGAMT as close to the National IG as possible, this update was not added. However, it could be considered for potential, future updates.
-    </p>
-			</td>
-		</tr>
-	</tbody>
+   </td>
+  </tr>
+  <tr aria-rowindex="1">
+   <td data-celllook="69905">
+    <p>
+     Component&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     Clarification Point&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     Resolution&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="2">
+   <td data-celllook="69905">
+    <p>
+     Conformance Statement&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     For IZ-51, in the National IG, there is a typographical error, which states "ACK^VO4" instead of "ACK^V04"&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The typographical error was fixed in the IG in IGAMT, so IZ-51 now reads "ACK^V04"&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="3">
+   <td data-celllook="69905">
+    <p>
+     Conformance Statement&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     For IZ-31 and IZ-47 in the National IG, state that additional repetitions may be valued with text notes. However, in the IG in IGAMT, these conformance statements do not mention repetitions of text notes.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     Additional repetitions with text notes were not included in the IZ-31 and IZ-37 conformance statements, as IGAMT does not have the functionality to add repetition logic to conformance statements. However, this information is included in the comments section of RXA-9 in the IG in IGAMT.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="4">
+   <td data-celllook="69905">
+    <p>
+     Conformance Statement&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     In the Z44 profile, IZ-27 states that RCP-1 should be constrained to the value "I". However, RCP-1 is a "RE" field, meaning that a value does not need to be submitted.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The IZ-27 conformance statement for the Z44 profile now includes "empty" as a value option.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="5">
+   <td data-celllook="69905">
+    <p>
+     MSA&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     There are two flavors of the MSA segment, which differ by the usage of MSA-5. For profiles Z23, Z31, Z42 the usage of MSA-5 is "O", while for the Z32 profile the usage of MSA-5 is "X".&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     MSA-5 was harmonized to "O" for all profiles, so that there is only one MSA flavor.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="6">
+   <td data-celllook="69905">
+    <p>
+     MSH&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     In the Z22 profile, the value set for MSH-16 is listed as "HL70155 (constrained)", while for all other profiles MSH-16's value set is "HL70155".&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The word "constrained" was removed from the value set for MSH-16 for the Z22 profile to harmonize the MSH flavors.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="7">
+   <td data-celllook="69905">
+    <p>
+     MSH&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     For MSH segments based on the v2.5.1 standard (Profiles Z31, Z32, Z33, Z34, Z42, and Z44), there are 23 fields mentioned in the National IG, however, the v2.5.1 base standard only has 21 fields.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     For these profiles, the v2.7.1 standard is used instead in IGAMT, as the MSH segment of the v2.7.1 standard contains 25 fields. For the extra fields in the v2.7.1 standard (MSH-24 and MSH-25) not needed, they have a usage of "O", allowing local IGs to implement these fields if interested.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="8">
+   <td data-celllook="69905">
+    <p>
+     MSH&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The MSH segments in the different flavors are only different due to the cardinality of MSH-21.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     Since the main differences between the MSH segments were due to cardinality, the MSH profile flavors were collapsed into one flavor, where MSH-21 has a cardinality of [1 .. *]&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="9">
+   <td data-celllook="69905">
+    <p>
+     OBX&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     There is a conflict between OBX-4's data type and conformance statement, as the data type is "ST", while the conformance statement says OBX-4 is a positive integer.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The data type of OBX-4 was changed to &ldquo;NM&rdquo; as it is the more appropriate data type.&acirc;&euro;&macr;&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="10">
+   <td data-celllook="69905">
+    <p>
+     OBX&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     IZ-20 in IGAMT specifies that the sequential numbering of OBX-1 can start within a message or group. However, the National IG specifies that sequential numbering can start within a message.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The Workgroup recommended that numbering could start within a message or group, as implemented in IGAMT.&acirc;&euro;&macr;&acirc;&euro;&macr;&nbsp;
+    </p>
+    <p>
+     &acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="11">
+   <td data-celllook="69905">
+    <p>
+     ORC&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     In the National IG, the differences between the ORC flavors distill down to the usage of ORC-10, with the Z42 profile having a usage of "RE" versus "O" in the rest of the profiles.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     No substantial reason could be determined for the usage of ORC-10 being "RE", thus, to consolidate the number of ORC segment flavors into one, the usage of ORC-10 was changed to "O" for the Z42 profile.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="12">
+   <td data-celllook="69905">
+    <p>
+     QAK&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     There is no conformance statement stating that QAK-3 shall mirror QPD-1, however it is mentioned in the field definition.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     No conformance statement for QAK-3 was implemented, as this is a HL7 base standard rule.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="13">
+   <td data-celllook="69905">
+    <p>
+     QPD&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The data type of QPD-13 is listed as "TS" in Table 7-6 and Table 11-8, however, the data type should be HD.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     Table 7-6 and Table 11-8 in IGAMT are updated with the correct data type information.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="14">
+   <td data-celllook="69905">
+    <p>
+     RCP&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     There are two RCP flavors as defined in the National IG, one for the Z34 profile and one for the Z44 profile. However, the flavor for the Z44 profile was not well defined in the IG and is not applicable the Z44 profile as only one record can be returned.&acirc;&euro;&macr;&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The Z44 flavor of the RCP segment was removed from this guide and the Z34 profile flavor will be used for the Z34 and Z44 profile.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="15">
+   <td data-celllook="69905">
+    <p>
+     RXA&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     For the RXA segment, the Z42 profile has three fields (RXA-15, RXA-16, and RXA-21) where usage differentiates the profile flavor from the other profiles.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The difference in usage with the Z42 profile is purposeful, as the Z42 was meant by the original National IG authors to have a minimum set of supported data elements. Thus, there are three flavors for the RXA segment, one for the Z22 profile, one for the Z32 profile, and one for the Z42 profile.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="16">
+   <td data-celllook="69905">
+    <p>
+     TQ1&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     In the National IG, there is not a timing group in the Z22 profile, however in IGAMT, there is a timing group.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The National IG should have included a timing group, as it is a part of the base v2 standard. Thus, a timing group was included in the IG in IGAMT.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="17">
+   <td data-celllook="69905">
+    <p>
+     TS_NZ&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The TS_NZ data type, which is contains day and time information, but not time zone information, is used in a few places throughout the National IG. One example is TS_NZ being used in PID-7, patient's date of birth. Thus, patient's date of birth, does not contain time zone related information.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     This issue was discussed, but as this issue has not been brought up previously, nor seems to be an issue for implementers, no changes were made.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="18">
+   <td data-celllook="69905">
+    <p>
+     Value Set&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     In the Addendum, a co-constraint table is referred to for the value set NIP003, however, no co-constraint table is included.&acirc;&euro;&macr;&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     In IGAMT, co-constraint tables for NIP003 were added for each of the profiles where NIP003 is used.&acirc;&euro;&macr;&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="19">
+   <td data-celllook="69905">
+    <p>
+     Value Set&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     For OBX-17, the value set is listed as "PNHV_FundingEligibilityObsMethod_IIS", but in the "Value Sets" section of the National IG it is listed as "PHVS_FundingEligibilityObsMethod_IIS".&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     This is a typographical error. The value set for OBX_17 should be listed as "PHVS_FundingEligibilityObsMethod_IIS" and is corrected in the IG in IGAMT.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="20">
+   <td data-celllook="69905">
+    <p>
+     Value Set&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     There are five value sets (HL7 Table 0204 (Organizational Name Type), HL7 Table 0360 (Degree), HL7 Table 0471 (Query Name), PHVS_HistoryofDisease (History of Disease as Evidence of Immunity), and PHVS_ImmunizationProfileIdentifier_IIS (Immunization Profile Identifiers- IIS)) that are mentioned but unbound in the IG.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The workgroup decided to include these value sets in the IG in IGAMT, as including these value sets is unharmful and can provide additional information. It is important to note that three of the value sets (HL7 Table 0204 (Organizational Name Type), HL7 Table 0360 (Degree), HL7 Table 0471 (Query Name)) are not explicitly used in the National IG. While the two other value sets (PHVS_HistoryofDisease (History of Disease as Evidence of Immunity), and PHVS_ImmunizationProfileIdentifier_IIS (Immunization Profile Identifiers- IIS) cannot be bound in IGAMT.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="21">
+   <td data-celllook="69905">
+    <p>
+     XAD&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     For the XAD.7 subcomponent, the usage is listed as "R" in the "HL7 Data Types" section of the National IG, however, within the Z34 and Z44 profiles the XAD data type is defined again and the usage for XAD.7 is "RE"&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The usage of XAD.7 has been changed to &ldquo;R&rdquo; throughout the IG in IGAMT.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="22">
+   <td data-celllook="69905">
+    <p>
+     XAD-4&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     XAD.4 has a length of [1 .. 50], but the comment is &ldquo;two characters USPS codes&rdquo;.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The length of XAD.4 was changed to [2 .. 2] in the IG in IGAMT to represent USPS state codes which are two characters long.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="23">
+   <td data-celllook="69905">
+    <p>
+     XPN&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     For the XPN.4 subcomponent, the usage is listed as "O" in the "HL7 Data Types" section of the National IG, however, within the Z34 and Z44 profiles, the XPN_M data type is defined again and the usage for XPN_M.4 is "RE".&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The usage of XPN.4 should be "O" throughout the National IG and the usage of XPN.4 was changed accordingly in the IG in IGAMT.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="24">
+   <td data-celllook="69905">
+    <p>
+     XPN_M&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     For the XPN_M.2 subcomponent the usage is listed as "RE" in the "HL7 Data Types" section of the National IG, however, within the Z34 and Z44 profiles, the XPN_M data type is defined again and the usage for XPN_M.2 is "O".&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The usage of XPN_M.2 should be "RE" throughout the National IG and was changed accordingly in the IG in IGAMT.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+  <tr aria-rowindex="25">
+   <td data-celllook="69905">
+    <p>
+     XTN&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     The description in Tables 7-6 and 11-8 should match the XPN definition in the VXU message and this is a candidate for slicing.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+   <td data-celllook="69905">
+    <p>
+     Due to the goal of making the IG in IGAMT as close to the National IG as possible, this update was not added. However, it could be considered for potential, future updates.&acirc;&euro;&macr;&nbsp;
+    </p>
+   </td>
+  </tr>
+ </tbody>
 </table>

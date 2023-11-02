@@ -2,13 +2,13 @@
  The Vaccine Information Statement (VIS) is a document that explains the reasons for a vaccine and the potential risks from receiving the vaccine. IIS track the fact that a VIS was shared with the client or parent. There are three pieces of information about each event.
 </p>
 <ul>
-	<li>
+ <li>
   The focus of the VIS or the VIS document type
  </li>
-	<li>
+ <li>
   The date that the VIS was presented to the client/parent.
  </li>
-	<li>
+ <li>
   The publication date (also known as Edition Date) of the VIS that was presented.
  </li>
 </ul>
@@ -19,46 +19,46 @@
  The VIS type may be indicated in one of two ways. The original way is to indicate the vaccine type in an OBX using a CVX code. For a vaccine that is a combination of vaccines, there are often separate VIS for each vaccine. This may be handled by sending 2 sets of OBX, one for each vaccine component.
 </p>
 <p>
-	<br/>
+ <br/>
 </p>
 <table style="width: 100%;">
-	<tbody>
-		<tr>
-			<td class="fr-thick" style="width: 100.0000%;">
+ <tbody>
+  <tr>
+   <td class="fr-thick" style="width: 100.0000%;">
     This method will not allow reporting of presentation of the multi-vaccine VIS and so all systems are urged to support the bar code approach illustrated below.
    </td>
-		</tr>
-	</tbody>
+  </tr>
+ </tbody>
 </table>
 <p>
-	<br/>
+ <br/>
 </p>
 <p>
  The preferred method for indicating VIS type is based on a scanned bar code of a Global Document Type Identifier (GDTI). The GDTI is composed of a document owner, an application, a document type identifier and a check digit. The fully encoded text string of the GDTI will be sent in an OBX segment. The mapping of the fully encoded string will be found in a table supported by the CDC. The publication date maybe inferred from the fully encoded GDTI. Therefore, only the presentation date and GDTI need to be sent.
 </p>
 <p>
- Two methods exist to transmit information in an HL7 message describing the VIS document(s) presented to patients or the legal guardians. The first involves the use of 2D VIS barcode data strings, "VIS Fully-encoded text string", while the second involves the identification of the vaccine type or group along with the VIS publication date. The use of the VIS Fully-encoded text string is highly recommended when messaging VIS information. The alternative of using the vaccine type, publication date and presentation date LOINC codes is problematic and fails in several use cases including when sending manufacturer specific VIS information (such as for HPV) or when sending the Multiple Vaccines VIS document. It is anticipated that this second method will be retired in a future release of the implementation guide. (Note: Scanning does not need to be used for this first method to work.)
+ Two methods exist to transmit information in an HL7 message describing the VIS document(s) presented to patients or the legal guardians. The first involves the use of 2D VIS barcode data strings, &ldquo;VIS Fully-encoded text string&rdquo;, while the second involves the identification of the vaccine type or group along with the VIS publication date. The use of the VIS Fully-encoded text string is highly recommended when messaging VIS information. The alternative of using the vaccine type, publication date and presentation date LOINC codes is problematic and fails in several use cases including when sending manufacturer specific VIS information (such as for HPV) or when sending the Multiple Vaccines VIS document. It is anticipated that this second method will be retired in a future release of the implementation guide. (Note: Scanning does not need to be used for this first method to work.)
 </p>
 <p>
- The 13 digit Global Document Type Identifier (GDTI) is used to identify a document type while the 24 digit VIS Fully-encoded text string begins with "253" and includes the GDTI as well as the publication date. The VIS Fully-encoded text string represents a particular version of the VIS document. The Implementation Guide currently says that the publication date may be inferred from the fully encoded GDTI. The term "fully encoded GDTI" here refers to the VIS Fully-encoded text string (24 digits) and not the 13 digit GDTI. As stated, it is the VIS Fully-encoded text string and not the GDTI that should be sent in OBX-5. The GDTI, Fully-encoded text string, and Edition Date are available in the VIS Lookup Table (http://www.cdc.gov/vaccines/programs/iis/code-sets/vis-barcode-lookup-table.html).
+ The 13 digit Global Document Type Identifier (GDTI) is used to identify a document type while the 24 digit VIS Fully-encoded text string begins with &ldquo;253&rdquo; and includes the GDTI as well as the publication date. The VIS Fully-encoded text string represents a particular version of the VIS document. The Implementation Guide currently says that the publication date may be inferred from the fully encoded GDTI. The term &ldquo;fully encoded GDTI&rdquo; here refers to the VIS Fully-encoded text string (24 digits) and not the 13 digit GDTI. As stated, it is the VIS Fully-encoded text string and not the GDTI that should be sent in OBX-5. The GDTI, Fully-encoded text string, and Edition Date are available in the VIS Lookup Table (http://www.cdc.gov/vaccines/programs/iis/code-sets/vis-barcode-lookup-table.html).
 </p>
 <p>
-	<strong>
+ <strong>
   Example 1-Single vaccine (GDTI approach)
  </strong>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   RXA|...
  </span>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   OBX|1|CE| 69764-9^document type^LN|1|253088698300012711120420^MMR^ cdcgs1vis||||||F|||20091010&lt;CR&gt;
  </span>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   OBX|2|TS|29769-7^VIS Presentation Date^LN|1|20091010||||||F|||20091010&lt;CR&gt;
  </span>
 </p>
@@ -66,32 +66,32 @@
  In this example the person received a dose of MMR on 10/10/2009. They received a VIS sheet on the same day. The document had a publication date of 1/10/2008 (determined from the lookup table of VIS GDTI.
 </p>
 <p>
-	<strong>
+ <strong>
   Example 2-Combination vaccine, 2 VIS (GDTI approach)
  </strong>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
-  RXA|0|1|20091010||94^MMRV^CVX|
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+  RXA|0|1|20091010||94^MMRV^CVX|&hellip;
  </span>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   OBX|1|CE|69764-9^Document Type^LN|1|253088698300012711120420^MMR^ cdcgs1vis ||||||F|||20091010&lt;CR&gt;
  </span>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   OBX|2|TS|29769-7^VIS Presentation Date^LN|1|20101010||||||F|||20091010&lt;CR&gt;
  </span>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   OBX|3|CE|69764-9^Document Type^LN|2|253088698300024011080313^varicella^ cdcgs1vis ||||||F|||20091010&lt;CR&gt;
  </span>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   OBX|4|TS|29769-7^VIS Presentation Date^LN|3|20101010||||||F&lt;CR&gt;
  </span>
 </p>
@@ -99,27 +99,27 @@
  This example shows that a person received an MMRV on 10/10/2009. They received 1 VIS document for MMR and one for Varicella.
 </p>
 <p>
-	<strong>
+ <strong>
   Example 3-Single vaccine (vaccine type approach)
  </strong>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   RXA|...
  </span>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   OBX|1|CE|30956-7^vaccine type^LN|1|03^MMR^CVX||||||F|||20120223&lt;CR&gt;
  </span>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   OBX|2|TS|29768-9^VIS Publication Date^LN|1|20080110||||||F|||20120223&lt;CR&gt;
  </span>
 </p>
 <p>
-	<span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
+ <span style="font-family: Times New Roman,Times,serif,-webkit-standard;">
   OBX|3|TS|29769-7^VIS Presentation Date^LN|1|20091010||||||F|||20120223&lt;CR&gt;
  </span>
 </p>
